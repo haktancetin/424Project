@@ -28,13 +28,31 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
             ""id"": ""526d9aaa-6c17-4207-b48e-17efdbbbb11a"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
-                    ""type"": ""Value"",
-                    ""id"": ""35b36a8f-d121-4a0f-bc90-9394b26f8d21"",
-                    ""expectedControlType"": ""Vector3"",
+                    ""name"": ""Accelerate"",
+                    ""type"": ""Button"",
+                    ""id"": ""edfec37c-3094-47b7-87cf-7a35066f57bc"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Turn"",
+                    ""type"": ""Button"",
+                    ""id"": ""77b3668b-3673-4f70-b76a-a02c98614d1d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Handbrake"",
+                    ""type"": ""Button"",
+                    ""id"": ""c91bcf56-90aa-4375-b323-928b7c237e45"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Blinkers"",
@@ -53,64 +71,18 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""CameraSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a81f6d1-0461-454f-8da2-5db86f3502ea"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": ""3D Vector"",
-                    ""id"": ""6bc0a53e-62b7-46ec-b32d-563822d542fc"",
-                    ""path"": ""3DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""67380460-1693-4977-b885-acb45c186445"",
-                    ""path"": ""<Keyboard>/#(A)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""ff553857-1724-476a-88b2-30e0103f9957"",
-                    ""path"": ""<Keyboard>/#(D)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""forward"",
-                    ""id"": ""d2099cfa-f924-485b-b22c-b70a6eebe82c"",
-                    ""path"": ""<Keyboard>/#(W)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""backward"",
-                    ""id"": ""6abfdd13-a833-4e43-8e85-7655f8fa4084"",
-                    ""path"": ""<Keyboard>/#(S)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
                 {
                     ""name"": ""1D Axis"",
                     ""id"": ""4e36d719-704e-4222-81e5-95b370823649"",
@@ -154,6 +126,94 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""action"": ""CameraMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""bd02d205-a5d0-4edc-9206-7b449d5b552f"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accelerate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""62113e51-b584-4189-91b8-33629d6d4b81"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accelerate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""a6d5d726-8f2d-422b-93a0-12e074e3e581"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accelerate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""24a13564-129b-44a3-b973-12bcb47105f7"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turn"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""d247fd36-df24-4b81-9566-f3da00211791"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""40f4df03-264f-4d6a-8331-ad0bd5e87e0f"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ecf1cc81-6e1f-46d5-be01-803c60ecd724"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Handbrake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ba6a8b6-49ac-480a-83a2-a7a9ef03826a"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -162,9 +222,12 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
 }");
         // PlayerControls
         m_PlayerControls = asset.FindActionMap("PlayerControls", throwIfNotFound: true);
-        m_PlayerControls_Movement = m_PlayerControls.FindAction("Movement", throwIfNotFound: true);
+        m_PlayerControls_Accelerate = m_PlayerControls.FindAction("Accelerate", throwIfNotFound: true);
+        m_PlayerControls_Turn = m_PlayerControls.FindAction("Turn", throwIfNotFound: true);
+        m_PlayerControls_Handbrake = m_PlayerControls.FindAction("Handbrake", throwIfNotFound: true);
         m_PlayerControls_Blinkers = m_PlayerControls.FindAction("Blinkers", throwIfNotFound: true);
         m_PlayerControls_CameraMovement = m_PlayerControls.FindAction("CameraMovement", throwIfNotFound: true);
+        m_PlayerControls_CameraSwitch = m_PlayerControls.FindAction("CameraSwitch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -226,16 +289,22 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
     // PlayerControls
     private readonly InputActionMap m_PlayerControls;
     private List<IPlayerControlsActions> m_PlayerControlsActionsCallbackInterfaces = new List<IPlayerControlsActions>();
-    private readonly InputAction m_PlayerControls_Movement;
+    private readonly InputAction m_PlayerControls_Accelerate;
+    private readonly InputAction m_PlayerControls_Turn;
+    private readonly InputAction m_PlayerControls_Handbrake;
     private readonly InputAction m_PlayerControls_Blinkers;
     private readonly InputAction m_PlayerControls_CameraMovement;
+    private readonly InputAction m_PlayerControls_CameraSwitch;
     public struct PlayerControlsActions
     {
         private @CarControlsMap m_Wrapper;
         public PlayerControlsActions(@CarControlsMap wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_PlayerControls_Movement;
+        public InputAction @Accelerate => m_Wrapper.m_PlayerControls_Accelerate;
+        public InputAction @Turn => m_Wrapper.m_PlayerControls_Turn;
+        public InputAction @Handbrake => m_Wrapper.m_PlayerControls_Handbrake;
         public InputAction @Blinkers => m_Wrapper.m_PlayerControls_Blinkers;
         public InputAction @CameraMovement => m_Wrapper.m_PlayerControls_CameraMovement;
+        public InputAction @CameraSwitch => m_Wrapper.m_PlayerControls_CameraSwitch;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -245,28 +314,46 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerControlsActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerControlsActionsCallbackInterfaces.Add(instance);
-            @Movement.started += instance.OnMovement;
-            @Movement.performed += instance.OnMovement;
-            @Movement.canceled += instance.OnMovement;
+            @Accelerate.started += instance.OnAccelerate;
+            @Accelerate.performed += instance.OnAccelerate;
+            @Accelerate.canceled += instance.OnAccelerate;
+            @Turn.started += instance.OnTurn;
+            @Turn.performed += instance.OnTurn;
+            @Turn.canceled += instance.OnTurn;
+            @Handbrake.started += instance.OnHandbrake;
+            @Handbrake.performed += instance.OnHandbrake;
+            @Handbrake.canceled += instance.OnHandbrake;
             @Blinkers.started += instance.OnBlinkers;
             @Blinkers.performed += instance.OnBlinkers;
             @Blinkers.canceled += instance.OnBlinkers;
             @CameraMovement.started += instance.OnCameraMovement;
             @CameraMovement.performed += instance.OnCameraMovement;
             @CameraMovement.canceled += instance.OnCameraMovement;
+            @CameraSwitch.started += instance.OnCameraSwitch;
+            @CameraSwitch.performed += instance.OnCameraSwitch;
+            @CameraSwitch.canceled += instance.OnCameraSwitch;
         }
 
         private void UnregisterCallbacks(IPlayerControlsActions instance)
         {
-            @Movement.started -= instance.OnMovement;
-            @Movement.performed -= instance.OnMovement;
-            @Movement.canceled -= instance.OnMovement;
+            @Accelerate.started -= instance.OnAccelerate;
+            @Accelerate.performed -= instance.OnAccelerate;
+            @Accelerate.canceled -= instance.OnAccelerate;
+            @Turn.started -= instance.OnTurn;
+            @Turn.performed -= instance.OnTurn;
+            @Turn.canceled -= instance.OnTurn;
+            @Handbrake.started -= instance.OnHandbrake;
+            @Handbrake.performed -= instance.OnHandbrake;
+            @Handbrake.canceled -= instance.OnHandbrake;
             @Blinkers.started -= instance.OnBlinkers;
             @Blinkers.performed -= instance.OnBlinkers;
             @Blinkers.canceled -= instance.OnBlinkers;
             @CameraMovement.started -= instance.OnCameraMovement;
             @CameraMovement.performed -= instance.OnCameraMovement;
             @CameraMovement.canceled -= instance.OnCameraMovement;
+            @CameraSwitch.started -= instance.OnCameraSwitch;
+            @CameraSwitch.performed -= instance.OnCameraSwitch;
+            @CameraSwitch.canceled -= instance.OnCameraSwitch;
         }
 
         public void RemoveCallbacks(IPlayerControlsActions instance)
@@ -286,8 +373,11 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
     public PlayerControlsActions @PlayerControls => new PlayerControlsActions(this);
     public interface IPlayerControlsActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnAccelerate(InputAction.CallbackContext context);
+        void OnTurn(InputAction.CallbackContext context);
+        void OnHandbrake(InputAction.CallbackContext context);
         void OnBlinkers(InputAction.CallbackContext context);
         void OnCameraMovement(InputAction.CallbackContext context);
+        void OnCameraSwitch(InputAction.CallbackContext context);
     }
 }
