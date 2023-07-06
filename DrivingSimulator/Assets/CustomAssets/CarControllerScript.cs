@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+
+ICONS LINKS TEMP STORAGE: <a href="https://www.flaticon.com/free-icons/pedal" title="pedal icons">Pedal icons created by Vitaly Gorbachev - Flaticon</a> 
+ 
+*/
+
 public class CarControllerScript : MonoBehaviour
 {
     private CarControlsMap carControlsMap;
@@ -11,6 +17,8 @@ public class CarControllerScript : MonoBehaviour
     public float forceMultiplier;
 
     public float turnSpeed;
+
+    public float maxVel;
 
     // Start is called before the first frame update
     void Start()
@@ -32,18 +40,31 @@ public class CarControllerScript : MonoBehaviour
         float turn = carControlsMap.PlayerControls.Turn.ReadValue<float>();
         float handbrake = carControlsMap.PlayerControls.Handbrake.ReadValue<float>();
 
-        Debug.Log("acc: " + Vector3.forward * accelerate);
-        Debug.Log("turn: " + turn);
-        Debug.Log("handbrake: " + handbrake);
+        //Debug.Log("acc: " + Vector3.forward * accelerate);
+        //Debug.Log("turn: " + turn);
+        //Debug.Log("handbrake: " + handbrake);
 
-        rigidBody.AddRelativeForce(Vector3.forward * forceMultiplier * accelerate);
+        if(handbrake <= 0)
+        {
+            rigidBody.AddRelativeForce(Vector3.forward * forceMultiplier * accelerate);
+        }
 
-        transform.RotateAroundLocal(Vector3.up, turn * turnSpeed * Time.deltaTime);
-        rigidBody.AddForce(Vector3.right * turn);
+        GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity, maxVel);
+
+
+        //Turning - only turn when accelerating in some way
+        //TODO: Check for actual movement, not key press
+        transform.RotateAroundLocal(Vector3.up, turn * turnSpeed * accelerate * Time.deltaTime);
+        rigidBody.AddRelativeForce(Vector3.right * turn * accelerate);
         
-        rigidBody.AddForce(Vector3.forward * -1 * handbrake);
+        //Handbrake - Slower than foot brake
+        if(rigidBody.velocity.magnitude > 0 )
+        {
+            rigidBody.AddRelativeForce(-rigidBody.velocity * handbrake * forceMultiplier / 5);
+        }
+        
 
-        //Other Controls
+        //Other Controls - Blinkers, Horn etc.
 
         float blinker = carControlsMap.PlayerControls.Blinkers.ReadValue<float>();
         if(blinker < 0)
