@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManagerScript : MonoBehaviour
 {
 
     [SerializeField]
     private int maxScore;
+
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+
+    [SerializeField]
+    private TextMeshProUGUI reasonText;
 
     [SerializeField]
     private CarControllerScript player;
@@ -20,7 +28,10 @@ public class GameManagerScript : MonoBehaviour
     public void UpdateScore(int modifier, string message)
     {
         player.score += modifier;
-        if(player.score > maxScore)
+        scoreText.text = "Demerits: " + player.score;
+        reasonText.text = message;
+
+        if (player.score > maxScore)
         {
             Application.Quit();
         }

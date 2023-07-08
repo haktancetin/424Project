@@ -19,7 +19,7 @@ public class PedBehaviourScript : MonoBehaviour
     {
         if(collision.gameObject.name == "PlayerCar"){
             //GameObject.SetActive(false);
-            gameManager.UpdateScore(-3, "Hit pedestrian!");
+            gameManager.UpdateScore(3, "Hit pedestrian!");
         }
     }
 
