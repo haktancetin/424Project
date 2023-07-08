@@ -68,3 +68,4 @@ VRealClient/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.j
 *.csproj
 *.dwlt
 /DrivingSimulator/UserSettings
+*.user

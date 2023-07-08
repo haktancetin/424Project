@@ -11,24 +11,39 @@ ICONS LINKS TEMP STORAGE: <a href="https://www.flaticon.com/free-icons/pedal" ti
 public class CarControllerScript : MonoBehaviour
 {
     private CarControlsMap carControlsMap;
-    private Rigidbody rigidBody;
+
+    [SerializeField]
+    private float maxSteerAngle = 30f;
+
+    [SerializeField]
+    private float maxBrakeTorque = 500f;
+
+    [SerializeField]
+    private WheelCollider[] wheelColliders;
+
+
+    [SerializeField]
+    private float torque = 250f;
 
     [Range(1,500)]
     public float forceMultiplier;
 
-    public float turnSpeed;
+    [Range(1, 500)]
+    public float handbrakeDrag;
 
-    public float maxVel;
+    public float score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         carControlsMap = new CarControlsMap();
         carControlsMap.Enable();
-        rigidBody = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
     }
+
+    Vector3 position;
+    Quaternion quaternion;
 
     // Update is called once per frame
     void Update()
@@ -39,31 +54,25 @@ public class CarControllerScript : MonoBehaviour
         float accelerate = carControlsMap.PlayerControls.Accelerate.ReadValue<float>();
         float turn = carControlsMap.PlayerControls.Turn.ReadValue<float>();
         float handbrake = carControlsMap.PlayerControls.Handbrake.ReadValue<float>();
-
-        //Debug.Log("acc: " + Vector3.forward * accelerate);
-        //Debug.Log("turn: " + turn);
-        //Debug.Log("handbrake: " + handbrake);
-
-        if(handbrake <= 0)
+        for (int i = 0; i< wheelColliders.Length; i++)
         {
-            rigidBody.AddRelativeForce(Vector3.forward * forceMultiplier * accelerate);
-        }
+            wheelColliders[i].motorTorque = accelerate * torque;
 
-        GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity, maxVel);
+            if(i < 2)
+            {
+                wheelColliders[i].steerAngle = turn * maxSteerAngle;
+            }
+            else
+            {
+                wheelColliders[i].brakeTorque = handbrake * maxBrakeTorque;
+            }
 
+            wheelColliders[i].GetWorldPose(out position, out quaternion);
+            wheelColliders[i].transform.GetChild(0).transform.position = position;
+            wheelColliders[i].transform.GetChild(0).transform.rotation = quaternion;
 
-        //Turning - only turn when accelerating in some way
-        //TODO: Check for actual movement, not key press
-        transform.RotateAroundLocal(Vector3.up, turn * turnSpeed * accelerate * Time.deltaTime);
-        rigidBody.AddRelativeForce(Vector3.right * turn * accelerate);
-        
-        //Handbrake - Slower than foot brake
-        if(rigidBody.velocity.magnitude > 0 )
-        {
-            rigidBody.AddRelativeForce(-rigidBody.velocity * handbrake * forceMultiplier / 5);
         }
         
-
         //Other Controls - Blinkers, Horn etc.
 
         float blinker = carControlsMap.PlayerControls.Blinkers.ReadValue<float>();
