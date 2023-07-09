@@ -60,7 +60,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""id"": ""c8c8e907-f025-4bc5-b53e-a4efe465154a"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": true
                 },
                 {

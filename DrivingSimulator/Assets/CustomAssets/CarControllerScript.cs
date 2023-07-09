@@ -21,6 +21,9 @@ public class CarControllerScript : MonoBehaviour
     [SerializeField]
     private WheelCollider[] wheelColliders;
 
+    [SerializeField]
+    private Material[] lights;
+
 
     [SerializeField]
     private float torque = 250f;
@@ -32,6 +35,40 @@ public class CarControllerScript : MonoBehaviour
     public float handbrakeDrag;
 
     public float score = 0;
+
+    private int onBlinker = -1;
+
+    private bool leftBlinkerOn = false;
+    private bool rightBlinkerOn = false;
+
+    Coroutine leftBlinker = null;
+    Coroutine rightBlinker = null;
+
+    private IEnumerator LeftBlinker()
+    {
+        while (true)
+        {
+            lights[0].EnableKeyword("_EMISSION");
+            lights[0].globalIlluminationFlags = MaterialGlobalIlluminationFlags.None;
+            yield return new WaitForSeconds(0.3f);
+            lights[0].DisableKeyword("_EMISSION");
+            lights[0].globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+            yield return new WaitForSeconds(0.3f);
+        }
+    }
+
+    private IEnumerator RightBlinker()
+    {
+        while (true)
+        {
+            lights[1].EnableKeyword("_EMISSION");
+            lights[1].globalIlluminationFlags = MaterialGlobalIlluminationFlags.None;
+            yield return new WaitForSeconds(0.3f);
+            lights[1].DisableKeyword("_EMISSION");
+            lights[1].globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+            yield return new WaitForSeconds(0.3f);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -78,11 +115,46 @@ public class CarControllerScript : MonoBehaviour
         float blinker = carControlsMap.PlayerControls.Blinkers.ReadValue<float>();
         if(blinker < 0)
         {
-
+            if (leftBlinkerOn)
+            {
+                StopCoroutine(leftBlinker);
+                lights[0].DisableKeyword("_EMISSION");
+                lights[0].globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+                leftBlinkerOn = false;
+            }
+            else
+            {
+                leftBlinkerOn = true;
+                if (rightBlinkerOn)
+                {
+                    StopCoroutine(rightBlinker);
+                    lights[1].DisableKeyword("_EMISSION");
+                    lights[1].globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+                }
+                leftBlinker = StartCoroutine(LeftBlinker());
+            }
         }
         else if(blinker > 0)
         {
+            if (rightBlinkerOn)
+            {
+                StopCoroutine(rightBlinker);
+                lights[1].DisableKeyword("_EMISSION");
+                lights[1].globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+                rightBlinkerOn = false;
+            }
+            else
+            {
+                rightBlinkerOn = true;
+                if (leftBlinkerOn)
+                {
+                    StopCoroutine(leftBlinker);
+                    lights[0].DisableKeyword("_EMISSION");
+                    lights[0].globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
 
+                }
+                rightBlinker = StartCoroutine(RightBlinker());
+            }
         }
     }
 }

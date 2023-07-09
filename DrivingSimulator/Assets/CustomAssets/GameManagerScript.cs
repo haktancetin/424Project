@@ -25,11 +25,21 @@ public class GameManagerScript : MonoBehaviour
         
     }
 
+
+    IEnumerator MessageFlash(string message)
+    {
+        reasonText.text = message;
+        yield return new WaitForSeconds(3);
+        reasonText.text = "";
+        yield return null;
+    }
+
+    //Handle demerits and possibly rewards
     public void UpdateScore(int modifier, string message)
     {
         player.score += modifier;
         scoreText.text = "Demerits: " + player.score;
-        reasonText.text = message;
+        StartCoroutine(MessageFlash(message));
 
         if (player.score > maxScore)
         {

@@ -828,8 +828,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: -0.70302665, y: 0, z: 0}
+  m_Size: {x: 1.0902262, y: 1, z: 1}
+  m_Center: {x: -0.011708736, y: 0, z: 0}
 --- !u!23 &1272482700
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -888,7 +888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272482698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.99, y: 1.57, z: 37.69}
+  m_LocalPosition: {x: 26.89, y: 1.57, z: 37.69}
   m_LocalScale: {x: 0.4, y: 3, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1554,6 +1554,22 @@ PrefabInstance:
     - target: {fileID: 1172504042187646694, guid: 3d5aa06990f34c14d92fa56037119543, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174002206815851774, guid: 3d5aa06990f34c14d92fa56037119543, type: 3}
+      propertyPath: lights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174002206815851774, guid: 3d5aa06990f34c14d92fa56037119543, type: 3}
+      propertyPath: lights.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d8f48f6b71290cc4c90811f5f54d2ab1, type: 2}
+    - target: {fileID: 1174002206815851774, guid: 3d5aa06990f34c14d92fa56037119543, type: 3}
+      propertyPath: lights.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e687101c776c8f74ab3eac5300da53c8, type: 2}
+    - target: {fileID: 1174002206815851776, guid: 3d5aa06990f34c14d92fa56037119543, type: 3}
+      propertyPath: m_Mass
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 1175162621288387526, guid: 3d5aa06990f34c14d92fa56037119543, type: 3}
       propertyPath: m_Name
