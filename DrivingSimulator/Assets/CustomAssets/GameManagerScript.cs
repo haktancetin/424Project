@@ -17,6 +17,9 @@ public class GameManagerScript : MonoBehaviour
     private TextMeshProUGUI reasonText;
 
     [SerializeField]
+    private TextMeshProUGUI controlsText;
+
+    [SerializeField]
     private CarControllerScript player;
 
     // Start is called before the first frame update
@@ -25,6 +28,10 @@ public class GameManagerScript : MonoBehaviour
         
     }
 
+    public void ToggleTutorial()
+    {
+        controlsText.enabled = !controlsText.enabled;
+    }
 
     IEnumerator MessageFlash(string message)
     {
@@ -43,7 +50,8 @@ public class GameManagerScript : MonoBehaviour
 
         if (player.score > maxScore)
         {
-            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
+            //Application.Quit();
         }
     }
 

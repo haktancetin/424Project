@@ -13,6 +13,9 @@ public class CarControllerScript : MonoBehaviour
     private CarControlsMap carControlsMap;
 
     [SerializeField]
+    private GameManagerScript gameManagerScript;
+
+    [SerializeField]
     private float maxSteerAngle = 30f;
 
     [SerializeField]
@@ -155,6 +158,12 @@ public class CarControllerScript : MonoBehaviour
                 }
                 rightBlinker = StartCoroutine(RightBlinker());
             }
+        }
+
+        float tutorial = carControlsMap.PlayerControls.ToggleTutorial.ReadValue<float>();
+        if(tutorial != 0)
+        {
+            gameManagerScript.ToggleTutorial();
         }
     }
 }

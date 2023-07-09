@@ -80,6 +80,15 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleTutorial"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3c94ba2-2993-46f0-aa97-4a5d4ce0dc49"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -214,6 +223,17 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""action"": ""CameraSwitch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8840ed96-6b79-43a3-8a45-7d2468c2bd8b"",
+                    ""path"": ""<Keyboard>/#(T)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleTutorial"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -228,6 +248,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         m_PlayerControls_Blinkers = m_PlayerControls.FindAction("Blinkers", throwIfNotFound: true);
         m_PlayerControls_CameraMovement = m_PlayerControls.FindAction("CameraMovement", throwIfNotFound: true);
         m_PlayerControls_CameraSwitch = m_PlayerControls.FindAction("CameraSwitch", throwIfNotFound: true);
+        m_PlayerControls_ToggleTutorial = m_PlayerControls.FindAction("ToggleTutorial", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,6 +316,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControls_Blinkers;
     private readonly InputAction m_PlayerControls_CameraMovement;
     private readonly InputAction m_PlayerControls_CameraSwitch;
+    private readonly InputAction m_PlayerControls_ToggleTutorial;
     public struct PlayerControlsActions
     {
         private @CarControlsMap m_Wrapper;
@@ -305,6 +327,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         public InputAction @Blinkers => m_Wrapper.m_PlayerControls_Blinkers;
         public InputAction @CameraMovement => m_Wrapper.m_PlayerControls_CameraMovement;
         public InputAction @CameraSwitch => m_Wrapper.m_PlayerControls_CameraSwitch;
+        public InputAction @ToggleTutorial => m_Wrapper.m_PlayerControls_ToggleTutorial;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -332,6 +355,9 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
             @CameraSwitch.started += instance.OnCameraSwitch;
             @CameraSwitch.performed += instance.OnCameraSwitch;
             @CameraSwitch.canceled += instance.OnCameraSwitch;
+            @ToggleTutorial.started += instance.OnToggleTutorial;
+            @ToggleTutorial.performed += instance.OnToggleTutorial;
+            @ToggleTutorial.canceled += instance.OnToggleTutorial;
         }
 
         private void UnregisterCallbacks(IPlayerControlsActions instance)
@@ -354,6 +380,9 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
             @CameraSwitch.started -= instance.OnCameraSwitch;
             @CameraSwitch.performed -= instance.OnCameraSwitch;
             @CameraSwitch.canceled -= instance.OnCameraSwitch;
+            @ToggleTutorial.started -= instance.OnToggleTutorial;
+            @ToggleTutorial.performed -= instance.OnToggleTutorial;
+            @ToggleTutorial.canceled -= instance.OnToggleTutorial;
         }
 
         public void RemoveCallbacks(IPlayerControlsActions instance)
@@ -379,5 +408,6 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         void OnBlinkers(InputAction.CallbackContext context);
         void OnCameraMovement(InputAction.CallbackContext context);
         void OnCameraSwitch(InputAction.CallbackContext context);
+        void OnToggleTutorial(InputAction.CallbackContext context);
     }
 }

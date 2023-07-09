@@ -155,6 +155,7 @@ MonoBehaviour:
   maxScore: 4
   scoreText: {fileID: 1810550974}
   reasonText: {fileID: 1265447010}
+  controlsText: {fileID: 368959170}
   player: {fileID: 989056692}
 --- !u!4 &1440187
 Transform:
@@ -1555,6 +1556,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1174002206815851774, guid: 3d5aa06990f34c14d92fa56037119543, type: 3}
+      propertyPath: gameManagerScript
+      value: 
+      objectReference: {fileID: 1440186}
     - target: {fileID: 1174002206815851774, guid: 3d5aa06990f34c14d92fa56037119543, type: 3}
       propertyPath: lights.Array.size
       value: 2
