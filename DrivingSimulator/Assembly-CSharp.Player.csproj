@@ -59,6 +59,10 @@
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoTouchInput.cs" />
+    <Compile Include="Assets\Scripts\TutorialZonesController.cs" />
+    <Compile Include="Assets\Scripts\TutorialZone.cs" />
+    <Compile Include="Assets\Scripts\TrafficLightsZone.cs" />
+    <Compile Include="Assets\Scripts\TrafficLightController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PROMETEO - Car Controller\Fonts\Licence.txt" />
