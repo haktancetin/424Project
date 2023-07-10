@@ -60,7 +60,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""id"": ""c8c8e907-f025-4bc5-b53e-a4efe465154a"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": true
                 },
                 {
@@ -78,7 +78,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""id"": ""8a81f6d1-0461-454f-8da2-5db86f3502ea"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(pressPoint=0.2,behavior=2)"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -87,7 +87,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""id"": ""a3c94ba2-2993-46f0-aa97-4a5d4ce0dc49"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": false
                 }
             ],

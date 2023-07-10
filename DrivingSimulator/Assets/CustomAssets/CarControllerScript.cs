@@ -25,8 +25,15 @@ public class CarControllerScript : MonoBehaviour
     private WheelCollider[] wheelColliders;
 
     [SerializeField]
+    private GameObject steeringWheel;
+
+    [SerializeField]
     private Material[] lights;
 
+    [SerializeField]
+    private GameObject[] cameras;
+
+    private bool current_camera = false;
 
     [SerializeField]
     private float torque = 250f;
@@ -38,8 +45,6 @@ public class CarControllerScript : MonoBehaviour
     public float handbrakeDrag;
 
     public float score = 0;
-
-    private int onBlinker = -1;
 
     private bool leftBlinkerOn = false;
     private bool rightBlinkerOn = false;
@@ -73,6 +78,23 @@ public class CarControllerScript : MonoBehaviour
         }
     }
 
+    private void SwitchCamera(bool current)
+    {
+        // 0 -> TPS Camera
+        // 1 -> FPS Camera
+        
+        if (current)
+        {
+            cameras[0].SetActive(false);
+            cameras[1].SetActive(true);
+        }
+        else
+        {
+            cameras[1].SetActive(false);
+            cameras[0].SetActive(true);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +102,8 @@ public class CarControllerScript : MonoBehaviour
         carControlsMap.Enable();
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        cameras[1].SetActive(false);
+        cameras[0].SetActive(true);
     }
 
     Vector3 position;
@@ -112,6 +136,19 @@ public class CarControllerScript : MonoBehaviour
             wheelColliders[i].transform.GetChild(0).transform.rotation = quaternion;
 
         }
+
+        /*
+        if(turn != 0)
+        {
+            Vector3 rotation = steeringWheel.transform.localEulerAngles;
+            rotation.z += turn * maxSteerAngle;
+            transform.localEulerAngles = rotation;
+        }
+        else
+        {
+
+        }
+        */
         
         //Other Controls - Blinkers, Horn etc.
 
@@ -164,6 +201,13 @@ public class CarControllerScript : MonoBehaviour
         if(tutorial != 0)
         {
             gameManagerScript.ToggleTutorial();
+        }
+
+        float camera = carControlsMap.PlayerControls.CameraSwitch.ReadValue<float>();
+        if(camera > 0)
+        {
+            current_camera = !current_camera;
+            SwitchCamera(current_camera);
         }
     }
 }
