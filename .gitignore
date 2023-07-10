@@ -65,7 +65,6 @@ VRealClient/UserSettings/Layouts/default-2021.dwlt
 VRealClient/VRealClient.sln
 VRealClient/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
 VRealClient/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
-*.csproj
 *.dwlt
 /DrivingSimulator/UserSettings
 *.user
