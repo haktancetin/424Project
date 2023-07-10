@@ -55,6 +55,13 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
+    public void Victory()
+    {
+        reasonText.color = Color.green;
+        reasonText.text = "Course completed!";
+        //UnityEditor.EditorApplication.isPlaying = false;
+    }
+
     // Update is called once per frame
     void Update()
     {

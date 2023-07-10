@@ -78,13 +78,22 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""id"": ""8a81f6d1-0461-454f-8da2-5db86f3502ea"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(pressPoint=0.2,behavior=2)"",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""ToggleTutorial"",
                     ""type"": ""Button"",
                     ""id"": ""a3c94ba2-2993-46f0-aa97-4a5d4ce0dc49"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reset"",
+                    ""type"": ""Button"",
+                    ""id"": ""60aef2e3-ff53-4580-8c40-c5b0b46bb6a1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press(behavior=2)"",
@@ -234,6 +243,17 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""action"": ""ToggleTutorial"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bb217fa4-7b49-4f4d-b058-61f845bd9436"",
+                    ""path"": ""<Keyboard>/#(R)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -249,6 +269,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         m_PlayerControls_CameraMovement = m_PlayerControls.FindAction("CameraMovement", throwIfNotFound: true);
         m_PlayerControls_CameraSwitch = m_PlayerControls.FindAction("CameraSwitch", throwIfNotFound: true);
         m_PlayerControls_ToggleTutorial = m_PlayerControls.FindAction("ToggleTutorial", throwIfNotFound: true);
+        m_PlayerControls_Reset = m_PlayerControls.FindAction("Reset", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -317,6 +338,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControls_CameraMovement;
     private readonly InputAction m_PlayerControls_CameraSwitch;
     private readonly InputAction m_PlayerControls_ToggleTutorial;
+    private readonly InputAction m_PlayerControls_Reset;
     public struct PlayerControlsActions
     {
         private @CarControlsMap m_Wrapper;
@@ -328,6 +350,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         public InputAction @CameraMovement => m_Wrapper.m_PlayerControls_CameraMovement;
         public InputAction @CameraSwitch => m_Wrapper.m_PlayerControls_CameraSwitch;
         public InputAction @ToggleTutorial => m_Wrapper.m_PlayerControls_ToggleTutorial;
+        public InputAction @Reset => m_Wrapper.m_PlayerControls_Reset;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -358,6 +381,9 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
             @ToggleTutorial.started += instance.OnToggleTutorial;
             @ToggleTutorial.performed += instance.OnToggleTutorial;
             @ToggleTutorial.canceled += instance.OnToggleTutorial;
+            @Reset.started += instance.OnReset;
+            @Reset.performed += instance.OnReset;
+            @Reset.canceled += instance.OnReset;
         }
 
         private void UnregisterCallbacks(IPlayerControlsActions instance)
@@ -383,6 +409,9 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
             @ToggleTutorial.started -= instance.OnToggleTutorial;
             @ToggleTutorial.performed -= instance.OnToggleTutorial;
             @ToggleTutorial.canceled -= instance.OnToggleTutorial;
+            @Reset.started -= instance.OnReset;
+            @Reset.performed -= instance.OnReset;
+            @Reset.canceled -= instance.OnReset;
         }
 
         public void RemoveCallbacks(IPlayerControlsActions instance)
@@ -409,5 +438,6 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         void OnCameraMovement(InputAction.CallbackContext context);
         void OnCameraSwitch(InputAction.CallbackContext context);
         void OnToggleTutorial(InputAction.CallbackContext context);
+        void OnReset(InputAction.CallbackContext context);
     }
 }

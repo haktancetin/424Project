@@ -52,6 +52,14 @@ public class CarControllerScript : MonoBehaviour
     Coroutine leftBlinker = null;
     Coroutine rightBlinker = null;
 
+    private float _originalRotX;
+    private float _originalRotY;
+    private float _originalRotZ;
+
+    private float _originalPosX;
+    private float _originalPosY;
+    private float _originalPosZ;
+
     private IEnumerator LeftBlinker()
     {
         while (true)
@@ -100,10 +108,20 @@ public class CarControllerScript : MonoBehaviour
     {
         carControlsMap = new CarControlsMap();
         carControlsMap.Enable();
+        
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        
         cameras[1].SetActive(false);
         cameras[0].SetActive(true);
+
+        _originalRotX = transform.rotation.x;
+        _originalRotY = transform.rotation.y;
+        _originalRotZ = transform.rotation.z;
+
+        _originalPosX = transform.position.x;
+        _originalPosY = transform.position.y;
+        _originalPosZ = transform.position.z;
     }
 
     Vector3 position;
@@ -208,6 +226,13 @@ public class CarControllerScript : MonoBehaviour
         {
             current_camera = !current_camera;
             SwitchCamera(current_camera);
+        }
+
+        float reset = carControlsMap.PlayerControls.Reset.ReadValue<float>();
+        if(reset > 0)
+        {
+            transform.position = new Vector3(_originalPosX, _originalPosY, _originalPosZ);
+            transform.rotation = (Quaternion.Euler(new Vector3(_originalRotX, _originalRotY, _originalRotZ)));
         }
     }
 }

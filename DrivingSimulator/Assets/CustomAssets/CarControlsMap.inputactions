@@ -56,13 +56,22 @@
                     "id": "8a81f6d1-0461-454f-8da2-5db86f3502ea",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press(pressPoint=0.2,behavior=2)",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 },
                 {
                     "name": "ToggleTutorial",
                     "type": "Button",
                     "id": "a3c94ba2-2993-46f0-aa97-4a5d4ce0dc49",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reset",
+                    "type": "Button",
+                    "id": "60aef2e3-ff53-4580-8c40-c5b0b46bb6a1",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(behavior=2)",
@@ -210,6 +219,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ToggleTutorial",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bb217fa4-7b49-4f4d-b058-61f845bd9436",
+                    "path": "<Keyboard>/#(R)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
