@@ -12,14 +12,19 @@ public class TrafficLightController : MonoBehaviour
     }
    
     public GameObject redLight, yellowLight, greenLight;
-    public float timer=0, redtimer, yellowtimer, greentimer;
     public TrafficLightsZone trafficLightsZone;
+
     Lightcolor lightcolor;
+
+    public float timer = 0;
+    private float redtimer, yellowtimer, greentimer;
+   
     void Start()
     {
-        
+        redtimer = 5f;
+        yellowtimer = 1.5f;
+        greentimer = 3f;
     }
-
     
     void Update()
     {
@@ -56,15 +61,14 @@ public class TrafficLightController : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Car")
+        Debug.Log("Traffic light triggered by car");
+
+        if (other.CompareTag("Car"))
         {
             trafficLightsZone.CheckFailSuccess(lightcolor);
         }
     }
-
-
 
 }

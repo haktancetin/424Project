@@ -11,26 +11,17 @@ public class TutorialZone : MonoBehaviour
 
     }
 
-    [SerializeField] GameObject FailUI, SuccessUI;
+    //GameObject FailUI, SuccessUI;
     protected ZoneType zoneType;
-    protected int Health;
     protected TutorialZonesController tutorialZonesController;
     [SerializeField] protected PrometeoCarController carController;
-    private void Start()
-    {
-       
-        SetStartConditions();
-        success();
-    }
 
-    protected virtual void SetStartConditions()
+    protected int wrongAttempts = 0;
+    protected int correctAttempts = 0;
+
+    private void Awake()
     {
         tutorialZonesController = GameObject.Find("TutorialZonesController").GetComponent<TutorialZonesController>();
     }
 
-    void success()
-    {
-        tutorialZonesController.Deneme();
-    }
-    
 }

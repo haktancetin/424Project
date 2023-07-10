@@ -5,29 +5,26 @@ using UnityEngine;
 public  class TutorialZonesController : MonoBehaviour
 {
     [SerializeField] TutorialZone[] tutorialZones;
-    private static int zoneIndex;
+    private int zoneIndex = -1;
 
-    public static TutorialZonesController instance;
     public GameObject currentTutorialZone = null;
 
     private void Start()
     {
-        if (zoneIndex == 0)
-        {
-            CreateTutorialZone(0);
-        }
+        LoadNextZone();
     }
-
 
     public void CreateTutorialZone(int index)
     {
-        GameObject tutorialZone = Instantiate(tutorialZones[index].gameObject, Vector3.zero, Quaternion.identity);
-        currentTutorialZone = tutorialZone;
-    }
-
-    public void LoadTutorialZone()
-    {
-
+        if (index >= 0 && index < tutorialZones.Length)
+        {
+            GameObject tutorialZone = Instantiate(tutorialZones[index].gameObject, Vector3.zero, Quaternion.identity);
+            currentTutorialZone = tutorialZone;
+        }
+        else
+        {
+            Debug.Log("Geçersiz bölge indeksi: " + index);
+        }
     }
 
     public void RestartTutorial()
@@ -38,13 +35,17 @@ public  class TutorialZonesController : MonoBehaviour
 
     public void LoadNextZone()
     {
-        zoneIndex++;
-        Destroy(currentTutorialZone);
-        CreateTutorialZone(zoneIndex);
+        if (zoneIndex + 1 < tutorialZones.Length)
+        {
+            zoneIndex++;
+            Destroy(currentTutorialZone);
+            CreateTutorialZone(zoneIndex);
+        }
+        else
+        {
+            Debug.Log("Tüm bölgeler tamamlandı.");
+        }
+       
     }
 
-    public void Deneme()
-    {
-        Debug.Log("Hello");
-    }
 }

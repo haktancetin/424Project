@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,64 +53,64 @@
     <UnityVersion>2021.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\RoadIntersectionEditor.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadConstructorBufferMaker.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadCreationT.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\Terraforming.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Navigation.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadAutomation.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RenderQueue.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\SplineFEditor.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\EditorProgressWindow.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerrainCalcs.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\UnitTests.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadCalcs1.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RigidBody.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Navigation.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\SplineFEditor.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerrainHistoryMaker.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Intersections.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\RoadSystemEditor.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\TrafficLightController.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplineF.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadCreationT.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\SplineIEditor.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RootUtils.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\Wizard.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\EditorUtilities.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplineC.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Construction3DTri.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\EdgeObjectMaker.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadSystem.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadCalcs2.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\ObjExporter.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Construction.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\IntersectionObjects.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\EditorProgressWindow.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\WizardObject.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadAutomation.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Construction2DRect.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerrainCalcs.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadUtility.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadIntersection.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\TerrainEditor.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\RoadEditor.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\SplineCEditor.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerrainHistoryUtility.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\TrafficLightSequence.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Road.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerrainCalcsStatic.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\Terraforming.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerraformingThreaded.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplineN.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplineI.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplinePreviewNode.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\RoadTerrain.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\HelpWindow.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\SplineNEditor.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadEditorUtility.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplineN.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\SaveWindow.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\RoadTerrain.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\EditorMenu.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\ObjExporter.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\iConstructionMaker.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\ThreadedJob.cs" />
-    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RenderQueue.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplineC.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\SplinatedMeshMaker.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\WizardObject.cs" />
     <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadTerrainInfo.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Construction3DTri.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\IntersectionObjects.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadEditorUtility.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplineF.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\TrafficLightSequence.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerrainCalcsStatic.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RootUtils.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerrainHistoryUtility.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerrainHistoryMaker.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\SplineIEditor.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\SplineCEditor.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Road.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Intersections.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\TrafficLightController.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Construction2DRect.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\EdgeObjectMaker.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadCalcs2.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\RoadIntersectionEditor.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\TerrainEditor.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadConstructorBufferMaker.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\RoadSystemEditor.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\EditorMenu.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\EditorUtilities.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadSystem.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplineI.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Spline\SplinePreviewNode.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\RoadIntersection.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Editor\RoadEditor.cs" />
+    <Compile Include="Assets\RoadArchitect\RoadArchitect-master\Scripts\Terrain\TerraformingThreaded.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\ShoulderDirtDX11.shader" />
@@ -120,6 +120,7 @@
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\RoadShaderDX11.shader" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\RoadShaderLowDX11.shader" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\TransparentWithShadows.shader" />
+    <None Include="Assets\RoadArchitect\RoadArchitect-master\Editor\Library\W\W.txt" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\RoadShaderLow.shader" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\RoadArchitect.asmdef" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\TransparentWithShadowsZ.shader" />
@@ -771,16 +772,14 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.26f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{4BE390ED-7ADC-44ED-D6C2-F822E4075C0B}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{A1FA7AE3-B81A-47B1-34EF-E819B0AAD1C7}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
