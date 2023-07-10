@@ -60,7 +60,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""id"": ""c8c8e907-f025-4bc5-b53e-a4efe465154a"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
@@ -78,7 +78,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""id"": ""8a81f6d1-0461-454f-8da2-5db86f3502ea"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -87,7 +87,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""id"": ""a3c94ba2-2993-46f0-aa97-4a5d4ce0dc49"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -105,7 +105,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""name"": ""1D Axis"",
                     ""id"": ""4e36d719-704e-4222-81e5-95b370823649"",
                     ""path"": ""1DAxis"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Blinkers"",
@@ -225,8 +225,8 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8ba6a8b6-49ac-480a-83a2-a7a9ef03826a"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
+                    ""path"": ""<Keyboard>/#(F)"",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""CameraSwitch"",
@@ -237,7 +237,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""8840ed96-6b79-43a3-8a45-7d2468c2bd8b"",
                     ""path"": ""<Keyboard>/#(T)"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ToggleTutorial"",

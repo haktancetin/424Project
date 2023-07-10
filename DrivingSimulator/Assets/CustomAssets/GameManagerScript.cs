@@ -59,6 +59,7 @@ public class GameManagerScript : MonoBehaviour
     {
         reasonText.color = Color.green;
         reasonText.text = "Course completed!";
+        Time.timeScale = 0;
         //UnityEditor.EditorApplication.isPlaying = false;
     }
 

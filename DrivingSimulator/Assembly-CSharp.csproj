@@ -58,11 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\CustomAssets\PedBehaviourScript.cs" />
     <Compile Include="Assets\CustomAssets\GameManagerScript.cs" />
+    <Compile Include="Assets\CustomAssets\FPSCameraScript.cs" />
     <Compile Include="Assets\CustomAssets\CarControllerScript.cs" />
     <Compile Include="Assets\Unity-Speedometer-master\Speedometer.cs" />
     <Compile Include="Assets\CustomAssets\CarControlsMap.cs" />
     <Compile Include="Assets\CustomAssets\GoalScript.cs" />
-    <Compile Include="Assets\CustomAssets\FPSCameraScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
