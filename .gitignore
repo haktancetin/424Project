@@ -7,6 +7,7 @@
 [Oo]bj/
 [Ll]ogs/
 [Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -64,3 +65,6 @@ VRealClient/UserSettings/Layouts/default-2021.dwlt
 VRealClient/VRealClient.sln
 VRealClient/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
 VRealClient/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+*.dwlt
+/DrivingSimulator/UserSettings
+*.user
