@@ -14,6 +14,14 @@ public  class TutorialZonesController : MonoBehaviour
         LoadNextZone();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.N))
+        {
+            LoadNextZone();
+        }
+    }
+
     public void CreateTutorialZone(int index)
     {
         if (index >= 0 && index < tutorialZones.Length)

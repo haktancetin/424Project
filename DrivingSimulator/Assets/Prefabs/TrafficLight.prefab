@@ -47,8 +47,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.188744, y: 7.9422216, z: 12.016235}
-  m_Center: {x: -8.312778, y: 3.4711108, z: -5.5081177}
+  m_Size: {x: 19.188744, y: 7.9422216, z: 1.4424248}
+  m_Center: {x: -8.312778, y: 3.4711108, z: -0.22121239}
 --- !u!114 &2368327688657387242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,11 +64,8 @@ MonoBehaviour:
   redLight: {fileID: 2368327689234037343}
   yellowLight: {fileID: 2368327688755834976}
   greenLight: {fileID: 2368327689922972795}
-  timer: 0
-  redtimer: 10
-  yellowtimer: 1.5
-  greentimer: 8
   trafficLightsZone: {fileID: 0}
+  timer: 0
 --- !u!1 &2368327688755834976
 GameObject:
   m_ObjectHideFlags: 0

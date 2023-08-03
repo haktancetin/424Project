@@ -153,7 +153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2128186
 MonoBehaviour:
@@ -6830,7 +6830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1055064252896096960, guid: 8e958906393a0dd4b8adb4631a2b051c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1055064252896096960, guid: 8e958906393a0dd4b8adb4631a2b051c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6910,7 +6910,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1055064252896096964, guid: 8e958906393a0dd4b8adb4631a2b051c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055064253661241444, guid: 8e958906393a0dd4b8adb4631a2b051c, type: 3}
+      propertyPath: m_Text
+      value: 'W - Go forward
+
+        S - Brakes/Reverse
+
+        A - Turn left
+
+        D
+        - Turn Right
+
+        Space - Handbrake
+
+        N - Parking Practice'
       objectReference: {fileID: 0}
     - target: {fileID: 1055064253661241444, guid: 8e958906393a0dd4b8adb4631a2b051c, type: 3}
       propertyPath: m_Color.b
