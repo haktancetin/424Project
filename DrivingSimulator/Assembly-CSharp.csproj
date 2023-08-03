@@ -71,6 +71,8 @@
     <Compile Include="Assets\Scripts\TutorialZonesController.cs" />
     <Compile Include="Assets\CustomAssets\GoalScript.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
+    <Compile Include="Assets\Scripts\ParkingZoneChecker.cs" />
+    <Compile Include="Assets\Scripts\ParkingSlot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

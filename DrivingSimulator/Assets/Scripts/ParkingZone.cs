@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ParkingZone : TutorialZone
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] List<GameObject> parkingZonesList = new List<GameObject>();
+    public UnityAction OnParkComplete;
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        OnParkComplete += SelectRandomParkingSlot;
+        SelectRandomParkingSlot();
+    }
+    void SelectRandomParkingSlot()
+    {
+        parkingZonesList[Random.Range(0, parkingZonesList.Count)].gameObject.SetActive(true);
     }
 }

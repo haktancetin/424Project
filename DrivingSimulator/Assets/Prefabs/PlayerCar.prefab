@@ -2715,7 +2715,7 @@ GameObject:
   - component: {fileID: 1174002206815851774}
   m_Layer: 0
   m_Name: PlayerCar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2782,6 +2782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bafeedefff6f97499082425245134b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 0}
   maxSteerAngle: 30
   maxBrakeTorque: 500
   wheelColliders:
@@ -2789,6 +2790,9 @@ MonoBehaviour:
   - {fileID: 5213951885466000891}
   - {fileID: 518362726317707028}
   - {fileID: 7017726312597861312}
+  steeringWheel: {fileID: 0}
+  lights: []
+  cameras: []
   torque: 250
   forceMultiplier: 0
   handbrakeDrag: 0
