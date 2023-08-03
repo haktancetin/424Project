@@ -8,6 +8,8 @@ public class ParkingZone : TutorialZone
     [SerializeField] List<GameObject> parkingZonesList = new List<GameObject>();
     public UnityAction OnParkComplete;
 
+    int lastIndex = 0;
+
     private void OnEnable()
     {
         OnParkComplete += SelectRandomParkingSlot;
@@ -15,6 +17,14 @@ public class ParkingZone : TutorialZone
     }
     void SelectRandomParkingSlot()
     {
-        parkingZonesList[Random.Range(0, parkingZonesList.Count)].gameObject.SetActive(true);
+        parkingZonesList[lastIndex].SetActive(false);
+        int tempIndex = lastIndex;
+        lastIndex = Random.Range(0, parkingZonesList.Count);
+        while(lastIndex == tempIndex) 
+        {
+            lastIndex = Random.Range(0, parkingZonesList.Count);
+        }
+        parkingZonesList[lastIndex].gameObject.SetActive(true);
+        StatTracker.parkingCompleted++;
     }
 }

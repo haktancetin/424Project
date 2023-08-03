@@ -18,7 +18,9 @@ public class TrafficLightController : MonoBehaviour
 
     public float timer = 0;
     private float redtimer, yellowtimer, greentimer;
-   
+
+
+    [SerializeField] GameObject floatingTextPrefab;
     void Start()
     {
         redtimer = 5f;
@@ -65,10 +67,12 @@ public class TrafficLightController : MonoBehaviour
     {
         Debug.Log("Traffic light triggered by car");
 
-        if (other.CompareTag("Car"))
+        if (other.CompareTag("Player"))
         {
             trafficLightsZone.CheckFailSuccess(lightcolor);
+            
         }
     }
+
 
 }
