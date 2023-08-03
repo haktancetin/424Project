@@ -5,60 +5,43 @@ using UnityEngine;
 public class TrafficLightsZone : TutorialZone 
 {
     private int requiredCorrectAttempts = 4;
+    UIManager manager;
 
-    public void CheckFailSuccess(TrafficLightController.Lightcolor light) {
+    private void Start()
+    {
+        manager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
+    }
 
-        float carSpeed = carController.carSpeed;
+
+    public void CheckFailSuccess(TrafficLightController.Lightcolor light) 
+    {
+
+        //float carSpeed = carController.carSpeed;
 
         if (light == TrafficLightController.Lightcolor.red)
         {
-            if (carSpeed > 0)
-            {
-                wrongAttempts++;
+            StatTracker.redlightPassed++;
+            wrongAttempts++;
+            manager.RedLightPassed();
 
-                if (wrongAttempts >= 2)
-                {
-                    tutorialZonesController.RestartTutorial();
-                    wrongAttempts = 0; // Yanlýþ yapma hakký sýfýrlanýyor
-                }
-            }
-            else
+            if (wrongAttempts >= 2)
             {
-                correctAttempts++;
-
-                if (correctAttempts >= requiredCorrectAttempts)
-                {
-                    tutorialZonesController.LoadNextZone();
-                }
-            }
-        }
-        else if (light == TrafficLightController.Lightcolor.green)
-        {
-            if (carSpeed > 0)
-            {
-                correctAttempts++;
-
-                if (correctAttempts >= requiredCorrectAttempts)
-                {
-                    tutorialZonesController.LoadNextZone();
-                }
-            }
-            else
-            {
-                wrongAttempts++;
-
-                if (wrongAttempts >= 2)
-                {
-                    tutorialZonesController.RestartTutorial();
-                    wrongAttempts = 0;
-                }
+                tutorialZonesController.RestartTutorial();
+                wrongAttempts = 0; // Yanlis yapma hakkini resetler
             }
         }
         else
         {
-            // Sarý ýþýk durumunda kontrol 
+            correctAttempts++;
+            StatTracker.greenlightPassed++;
+            manager.GreenLightPassed();
+            Debug.Log("Green Light Passed");
+            if (correctAttempts >= requiredCorrectAttempts)
+            {
+                tutorialZonesController.LoadNextZone();
+            }
         }
-
+      
     }
    
 }

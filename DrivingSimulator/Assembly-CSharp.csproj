@@ -73,6 +73,10 @@
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
     <Compile Include="Assets\Scripts\ParkingZoneChecker.cs" />
     <Compile Include="Assets\Scripts\ParkingSlot.cs" />
+    <Compile Include="Assets\Scripts\StatTracker.cs" />
+    <Compile Include="Assets\Scripts\ParkingUIManager.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\FloatingText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -66,6 +66,7 @@ MonoBehaviour:
   greenLight: {fileID: 2368327689922972795}
   trafficLightsZone: {fileID: 0}
   timer: 0
+  floatingTextPrefab: {fileID: 1486138410090061958, guid: e11a581fdb3eedd4c976a669a028c3b7, type: 3}
 --- !u!1 &2368327688755834976
 GameObject:
   m_ObjectHideFlags: 0

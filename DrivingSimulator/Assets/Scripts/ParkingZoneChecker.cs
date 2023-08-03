@@ -10,18 +10,19 @@ public class ParkingZoneChecker : MonoBehaviour
     {
         parkingSlotScript = GetComponentInParent<ParkingSlot>();
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player"))
+        {
             parkingSlotScript.Counter++;
             Debug.Log($"{gameObject.name} collider entered");
-        if(collision.collider.CompareTag("Player"))
-        {
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if(collision.collider.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             parkingSlotScript.Counter--;
             Debug.Log($"{gameObject.name} collider left");
