@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrafficLightsZone : TutorialZone 
+public class TrafficLightsZone : TutorialZone
 {
-    private int requiredCorrectAttempts = 4;
+    private int requiredCorrectAttempts = 10;
     UIManager manager;
 
     private void Start()
@@ -12,8 +12,7 @@ public class TrafficLightsZone : TutorialZone
         manager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
     }
 
-
-    public void CheckFailSuccess(TrafficLightController.Lightcolor light) 
+    public void CheckFailSuccess(TrafficLightController.Lightcolor light)
     {
 
         //float carSpeed = carController.carSpeed;
@@ -21,27 +20,29 @@ public class TrafficLightsZone : TutorialZone
         if (light == TrafficLightController.Lightcolor.red)
         {
             StatTracker.redlightPassed++;
-            wrongAttempts++;
-            manager.RedLightPassed();
+            manager.UpdateUI();
 
-            if (wrongAttempts >= 2)
+            if (StatTracker.redlightPassed >= 2)
             {
+                StatTracker.redlightPassed = 0;
+                StatTracker.greenlightPassed = 0;
+                manager.UpdateUI();
                 tutorialZonesController.RestartTutorial();
-                wrongAttempts = 0; // Yanlis yapma hakkini resetler
             }
         }
         else
         {
-            correctAttempts++;
             StatTracker.greenlightPassed++;
-            manager.GreenLightPassed();
-            Debug.Log("Green Light Passed");
-            if (correctAttempts >= requiredCorrectAttempts)
+            manager.UpdateUI();
+            if (StatTracker.greenlightPassed >= requiredCorrectAttempts)
             {
+                StatTracker.redlightPassed = 0;
+                StatTracker.greenlightPassed = 0;
+                manager.UpdateUI();
                 tutorialZonesController.LoadNextZone();
             }
         }
-      
+
     }
-   
+
 }

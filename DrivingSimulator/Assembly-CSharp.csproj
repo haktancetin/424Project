@@ -53,30 +53,30 @@
     <UnityVersion>2021.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\TrafficLightsZone.cs" />
+    <Compile Include="Assets\Scripts\ParkingUIManager.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoTouchInput.cs" />
+    <Compile Include="Assets\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Scripts\ParkingZone.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\TrafficLightController.cs" />
+    <Compile Include="Assets\Scripts\StatTracker.cs" />
     <Compile Include="Assets\CustomAssets\PedBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\ParkingZoneChecker.cs" />
     <Compile Include="Assets\CustomAssets\GameManagerScript.cs" />
     <Compile Include="Assets\CustomAssets\FPSCameraScript.cs" />
     <Compile Include="Assets\CustomAssets\CarControllerScript.cs" />
     <Compile Include="Assets\Scripts\TutorialZone.cs" />
+    <Compile Include="Assets\Scripts\ParkingSlot.cs" />
     <Compile Include="Assets\Unity-Speedometer-master\Speedometer.cs" />
     <Compile Include="Assets\CustomAssets\CarControlsMap.cs" />
     <Compile Include="Assets\Scripts\TutorialZonesController.cs" />
     <Compile Include="Assets\CustomAssets\GoalScript.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
-    <Compile Include="Assets\Scripts\ParkingZoneChecker.cs" />
-    <Compile Include="Assets\Scripts\ParkingSlot.cs" />
-    <Compile Include="Assets\Scripts\StatTracker.cs" />
-    <Compile Include="Assets\Scripts\ParkingUIManager.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\FloatingText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

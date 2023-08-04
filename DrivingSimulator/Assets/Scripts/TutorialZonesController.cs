@@ -8,7 +8,6 @@ public  class TutorialZonesController : MonoBehaviour
     private int zoneIndex = -1;
 
     public GameObject currentTutorialZone = null;
-    [SerializeField] GameObject currentCanvas;
 
     private void Start()
     {
@@ -19,7 +18,6 @@ public  class TutorialZonesController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.N))
         {
-            currentCanvas.SetActive(false);
             LoadNextZone();
         }
     }
