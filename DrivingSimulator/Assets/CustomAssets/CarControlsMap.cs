@@ -98,6 +98,51 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LeftMirror"",
+                    ""type"": ""Button"",
+                    ""id"": ""6eb87078-d203-4fec-8a6a-c66c09b512e9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CenterMirror"",
+                    ""type"": ""Button"",
+                    ""id"": ""43915c62-ddc9-4697-9a3a-6d0fcd2db341"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RightMirror"",
+                    ""type"": ""Button"",
+                    ""id"": ""291844d7-a9ae-463b-9e13-b367919fc411"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LeftBlinker"",
+                    ""type"": ""Button"",
+                    ""id"": ""38cea431-92ef-446c-952e-269ce8638c02"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RightBlinker"",
+                    ""type"": ""Button"",
+                    ""id"": ""95807304-20a7-407c-80ad-44505ace8bed"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -126,7 +171,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""6b0767f0-a802-4c94-aac9-860ef60a3cd3"",
-                    ""path"": ""<Keyboard>/#(ı)"",
+                    ""path"": ""<Keyboard>/#(I)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -237,7 +282,7 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""8840ed96-6b79-43a3-8a45-7d2468c2bd8b"",
                     ""path"": ""<Keyboard>/#(T)"",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ToggleTutorial"",
@@ -252,6 +297,61 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Reset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""644c2891-f3a2-4ddd-a900-cb3d008b1a81"",
+                    ""path"": ""<Keyboard>/#(J)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftMirror"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3b540071-db6e-4e1b-ba4d-b0f3e164ca07"",
+                    ""path"": ""<Keyboard>/#(K)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CenterMirror"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e301416a-e615-47cf-8071-4a97de9cebe0"",
+                    ""path"": ""<Keyboard>/#(L)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightMirror"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8c897e25-ed28-4803-982d-f6e2c598d6dc"",
+                    ""path"": ""<Keyboard>/#(U)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftBlinker"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4de29406-ca9b-443f-8498-91ddbba48c29"",
+                    ""path"": ""<Keyboard>/#(ı)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightBlinker"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -270,6 +370,11 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         m_PlayerControls_CameraSwitch = m_PlayerControls.FindAction("CameraSwitch", throwIfNotFound: true);
         m_PlayerControls_ToggleTutorial = m_PlayerControls.FindAction("ToggleTutorial", throwIfNotFound: true);
         m_PlayerControls_Reset = m_PlayerControls.FindAction("Reset", throwIfNotFound: true);
+        m_PlayerControls_LeftMirror = m_PlayerControls.FindAction("LeftMirror", throwIfNotFound: true);
+        m_PlayerControls_CenterMirror = m_PlayerControls.FindAction("CenterMirror", throwIfNotFound: true);
+        m_PlayerControls_RightMirror = m_PlayerControls.FindAction("RightMirror", throwIfNotFound: true);
+        m_PlayerControls_LeftBlinker = m_PlayerControls.FindAction("LeftBlinker", throwIfNotFound: true);
+        m_PlayerControls_RightBlinker = m_PlayerControls.FindAction("RightBlinker", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -339,6 +444,11 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControls_CameraSwitch;
     private readonly InputAction m_PlayerControls_ToggleTutorial;
     private readonly InputAction m_PlayerControls_Reset;
+    private readonly InputAction m_PlayerControls_LeftMirror;
+    private readonly InputAction m_PlayerControls_CenterMirror;
+    private readonly InputAction m_PlayerControls_RightMirror;
+    private readonly InputAction m_PlayerControls_LeftBlinker;
+    private readonly InputAction m_PlayerControls_RightBlinker;
     public struct PlayerControlsActions
     {
         private @CarControlsMap m_Wrapper;
@@ -351,6 +461,11 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         public InputAction @CameraSwitch => m_Wrapper.m_PlayerControls_CameraSwitch;
         public InputAction @ToggleTutorial => m_Wrapper.m_PlayerControls_ToggleTutorial;
         public InputAction @Reset => m_Wrapper.m_PlayerControls_Reset;
+        public InputAction @LeftMirror => m_Wrapper.m_PlayerControls_LeftMirror;
+        public InputAction @CenterMirror => m_Wrapper.m_PlayerControls_CenterMirror;
+        public InputAction @RightMirror => m_Wrapper.m_PlayerControls_RightMirror;
+        public InputAction @LeftBlinker => m_Wrapper.m_PlayerControls_LeftBlinker;
+        public InputAction @RightBlinker => m_Wrapper.m_PlayerControls_RightBlinker;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -384,6 +499,21 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
             @Reset.started += instance.OnReset;
             @Reset.performed += instance.OnReset;
             @Reset.canceled += instance.OnReset;
+            @LeftMirror.started += instance.OnLeftMirror;
+            @LeftMirror.performed += instance.OnLeftMirror;
+            @LeftMirror.canceled += instance.OnLeftMirror;
+            @CenterMirror.started += instance.OnCenterMirror;
+            @CenterMirror.performed += instance.OnCenterMirror;
+            @CenterMirror.canceled += instance.OnCenterMirror;
+            @RightMirror.started += instance.OnRightMirror;
+            @RightMirror.performed += instance.OnRightMirror;
+            @RightMirror.canceled += instance.OnRightMirror;
+            @LeftBlinker.started += instance.OnLeftBlinker;
+            @LeftBlinker.performed += instance.OnLeftBlinker;
+            @LeftBlinker.canceled += instance.OnLeftBlinker;
+            @RightBlinker.started += instance.OnRightBlinker;
+            @RightBlinker.performed += instance.OnRightBlinker;
+            @RightBlinker.canceled += instance.OnRightBlinker;
         }
 
         private void UnregisterCallbacks(IPlayerControlsActions instance)
@@ -412,6 +542,21 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
             @Reset.started -= instance.OnReset;
             @Reset.performed -= instance.OnReset;
             @Reset.canceled -= instance.OnReset;
+            @LeftMirror.started -= instance.OnLeftMirror;
+            @LeftMirror.performed -= instance.OnLeftMirror;
+            @LeftMirror.canceled -= instance.OnLeftMirror;
+            @CenterMirror.started -= instance.OnCenterMirror;
+            @CenterMirror.performed -= instance.OnCenterMirror;
+            @CenterMirror.canceled -= instance.OnCenterMirror;
+            @RightMirror.started -= instance.OnRightMirror;
+            @RightMirror.performed -= instance.OnRightMirror;
+            @RightMirror.canceled -= instance.OnRightMirror;
+            @LeftBlinker.started -= instance.OnLeftBlinker;
+            @LeftBlinker.performed -= instance.OnLeftBlinker;
+            @LeftBlinker.canceled -= instance.OnLeftBlinker;
+            @RightBlinker.started -= instance.OnRightBlinker;
+            @RightBlinker.performed -= instance.OnRightBlinker;
+            @RightBlinker.canceled -= instance.OnRightBlinker;
         }
 
         public void RemoveCallbacks(IPlayerControlsActions instance)
@@ -439,5 +584,10 @@ public partial class @CarControlsMap: IInputActionCollection2, IDisposable
         void OnCameraSwitch(InputAction.CallbackContext context);
         void OnToggleTutorial(InputAction.CallbackContext context);
         void OnReset(InputAction.CallbackContext context);
+        void OnLeftMirror(InputAction.CallbackContext context);
+        void OnCenterMirror(InputAction.CallbackContext context);
+        void OnRightMirror(InputAction.CallbackContext context);
+        void OnLeftBlinker(InputAction.CallbackContext context);
+        void OnRightBlinker(InputAction.CallbackContext context);
     }
 }
