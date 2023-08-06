@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadArchitect", "RoadArchitect.csproj", "{437ABAE3-E960-5CF7-BCF6-D8AA2BF0F807}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator", "Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator.csproj", "{1A4E116D-9988-9335-4BC8-D65EC92AC120}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{5BF08D58-51D9-A4DA-13D0-373F2C44E74D}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{437ABAE3-E960-5CF7-BCF6-D8AA2BF0F807}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{437ABAE3-E960-5CF7-BCF6-D8AA2BF0F807}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{437ABAE3-E960-5CF7-BCF6-D8AA2BF0F807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4E116D-9988-9335-4BC8-D65EC92AC120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4E116D-9988-9335-4BC8-D65EC92AC120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4E116D-9988-9335-4BC8-D65EC92AC120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4E116D-9988-9335-4BC8-D65EC92AC120}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5BF08D58-51D9-A4DA-13D0-373F2C44E74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5BF08D58-51D9-A4DA-13D0-373F2C44E74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BF08D58-51D9-A4DA-13D0-373F2C44E74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
