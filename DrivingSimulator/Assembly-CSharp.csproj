@@ -59,37 +59,37 @@
     <Compile Include="Assets\Scripts\TrafficLightsZone.cs" />
     <Compile Include="Assets\Scripts\ParkingUIManager.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesMetadataPicking.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoTouchInput.cs" />
     <Compile Include="Assets\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Scripts\ParkingZone.cs" />
+    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesMetadataPickingVR.cs" />
     <Compile Include="Assets\CustomAssets\PedBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\ParkingZoneChecker.cs" />
+    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesFlyToLocationHandler.cs" />
+    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
+    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\Scripts\ParkingSlot.cs" />
     <Compile Include="Assets\Unity-Speedometer-master\Speedometer.cs" />
+    <Compile Include="Assets\Cesium\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
     <Compile Include="Assets\CustomAssets\GoalScript.cs" />
+    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
+    <Compile Include="Assets\Cesium\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
+    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesScene.cs" />
+    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\TrafficLightController.cs" />
     <Compile Include="Assets\Scripts\StatTracker.cs" />
+    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
+    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesTeleportationArea.cs" />
     <Compile Include="Assets\CustomAssets\GameManagerScript.cs" />
     <Compile Include="Assets\CustomAssets\FPSCameraScript.cs" />
+    <Compile Include="Assets\Cesium\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\CustomAssets\CarControllerScript.cs" />
     <Compile Include="Assets\Scripts\TutorialZone.cs" />
     <Compile Include="Assets\CustomAssets\CarControlsMap.cs" />
     <Compile Include="Assets\Scripts\TutorialZonesController.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
-    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesFlyToLocationHandler.cs" />
-    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesMetadataPicking.cs" />
-    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesMetadataPickingVR.cs" />
-    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesScene.cs" />
-    <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesTeleportationArea.cs" />
-    <Compile Include="Assets\Cesium\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
-    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
-    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
-    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
-    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
-    <Compile Include="Assets\Cesium\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
-    <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
-    <Compile Include="Assets\Cesium\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cesium\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
@@ -941,13 +941,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="RoadArchitect.csproj">
-      <Project>{437ABAE3-E960-5CF7-BCF6-D8AA2BF0F807}</Project>
-      <Name>RoadArchitect</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator.csproj">
       <Project>{1A4E116D-9988-9335-4BC8-D65EC92AC120}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator</Name>
+    </ProjectReference>
+    <ProjectReference Include="RoadArchitect.csproj">
+      <Project>{437ABAE3-E960-5CF7-BCF6-D8AA2BF0F807}</Project>
+      <Name>RoadArchitect</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
