@@ -56,13 +56,27 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CustomAssets\PedBehaviourScript.cs" />
-    <Compile Include="Assets\CustomAssets\GameManagerScript.cs" />
-    <Compile Include="Assets\CustomAssets\FPSCameraScript.cs" />
-    <Compile Include="Assets\CustomAssets\CarControllerScript.cs" />
+    <Compile Include="Assets\Scripts\TrafficLightsZone.cs" />
+    <Compile Include="Assets\Scripts\ParkingUIManager.cs" />
+    <Compile Include="Assets\PROMETEO - Car Controller\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoTouchInput.cs" />
+    <Compile Include="Assets\Scripts\FloatingText.cs" />
+    <Compile Include="Assets\Scripts\ParkingZone.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\TrafficLightController.cs" />
+    <Compile Include="Assets\Scripts\StatTracker.cs" />
+    <Compile Include="Assets\Scripts\PedBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\ParkingZoneChecker.cs" />
+    <Compile Include="Assets\Scripts\GameManagerScript.cs" />
+    <Compile Include="Assets\Scripts\FPSCameraScript.cs" />
+    <Compile Include="Assets\Scripts\CarControllerScript.cs" />
+    <Compile Include="Assets\Scripts\TutorialZone.cs" />
+    <Compile Include="Assets\Scripts\ParkingSlot.cs" />
     <Compile Include="Assets\Unity-Speedometer-master\Speedometer.cs" />
     <Compile Include="Assets\CustomAssets\CarControlsMap.cs" />
-    <Compile Include="Assets\CustomAssets\GoalScript.cs" />
+    <Compile Include="Assets\Scripts\TutorialZonesController.cs" />
+    <Compile Include="Assets\Scripts\GoalScript.cs" />
+    <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -85,6 +99,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\PROMETEO - Car Controller\Fonts\Licence.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -667,6 +682,10 @@
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{9B077EDE-A31E-2733-4531-512E698C8B9F}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="RoadArchitect.Player.csproj">
+      <Project>{A1B5D564-EC94-5291-75FB-658E37C3B614}</Project>
+      <Name>RoadArchitect.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
       <Project>{E177D19E-3B27-7C9D-CCB5-EFF6D44B904C}</Project>

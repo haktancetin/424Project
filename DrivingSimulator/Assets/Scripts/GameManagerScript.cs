@@ -17,20 +17,12 @@ public class GameManagerScript : MonoBehaviour
     private TextMeshProUGUI reasonText;
 
     [SerializeField]
-    private TextMeshProUGUI controlsText;
-
-    [SerializeField]
     private CarControllerScript player;
 
     // Start is called before the first frame update
     void Start()
     {
         
-    }
-
-    public void ToggleTutorial()
-    {
-        controlsText.enabled = !controlsText.enabled;
     }
 
     IEnumerator MessageFlash(string message)
