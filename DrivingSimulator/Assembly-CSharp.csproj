@@ -90,6 +90,10 @@
     <Compile Include="Assets\CustomAssets\CarControlsMap.cs" />
     <Compile Include="Assets\Scripts\TutorialZonesController.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
+    <Compile Include="Assets\Scripts\CarSpawnerScript.cs" />
+    <Compile Include="Assets\CarAI-Unity-main\Scripts\SensorManager.cs" />
+    <Compile Include="Assets\CarAI-Unity-main\Scripts\CarAI.cs" />
+    <Compile Include="Assets\CarAI-Unity-main\Scripts\controllingCarAI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cesium\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />

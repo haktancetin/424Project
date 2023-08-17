@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Car
   - UIManager
+  - TrafficLight
+  - Building
+  - Goal
   layers:
   - Default
   - TransparentFX
