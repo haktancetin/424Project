@@ -144,6 +144,26 @@ public class CarControllerScript : MonoBehaviour
     }
 
 
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("TrafficLight"))
+        {
+            TrafficLightController trafficLightController = col.gameObject.GetComponent<TrafficLightController>();
+            if (trafficLightController.redLight.activeSelf)
+            {
+                gameManagerScript.UpdateScore(1, "Ran red light!");
+            }
+        }
+        else if (col.gameObject.CompareTag("Car"))
+        {
+            gameManagerScript.UpdateScore(3, "Hit car!");
+        }
+        else if (col.gameObject.CompareTag("Goal"))
+        {
+            gameManagerScript.Victory();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
