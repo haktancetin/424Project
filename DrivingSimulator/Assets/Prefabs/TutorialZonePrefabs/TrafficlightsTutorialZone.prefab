@@ -14104,6 +14104,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a222a4a1d36f94d41a1180015a5cea86, type: 3}
+--- !u!1 &2406599552715137743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1175162621288387526, guid: a222a4a1d36f94d41a1180015a5cea86, type: 3}
+  m_PrefabInstance: {fileID: 3542909758103433481}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5007431268128242849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2406599552715137743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8442fe87e55eb648881c6e815bd6cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedTextObject: {fileID: 0}
+  carRb: {fileID: 0}
+  speedText: {fileID: 0}
 --- !u!4 &2409253803162916847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1172504042187646694, guid: a222a4a1d36f94d41a1180015a5cea86, type: 3}

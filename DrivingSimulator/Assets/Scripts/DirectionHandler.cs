@@ -12,7 +12,6 @@ public class DirectionHandler : MonoBehaviour
     {
         warningObject = GameObject.Find("WarningText");
         warningText = warningObject.GetComponent<Text>();
-        warningText.text = "Wrong Side!";
     }
 
     private void Update()
