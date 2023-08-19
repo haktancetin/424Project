@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrafficLightsZone : TutorialZone
 {
-    private int requiredCorrectAttempts = 10;
+    private int requiredCorrectAttempts = 4;
     UIManager manager;
 
     private void Start()

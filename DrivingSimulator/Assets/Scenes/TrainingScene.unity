@@ -170,8 +170,7 @@ MonoBehaviour:
   tutorialZones:
   - {fileID: 668177351850855703, guid: 178dc25368eec77429d9c2ba73d26edb, type: 3}
   - {fileID: 7043774357528744511, guid: 7e648a694317fe243870cc648e8bd07f, type: 3}
-  currentTutorialZone: {fileID: 0}
-  currentCanvas: {fileID: 0}
+  currentTutorialZone: {fileID: 7043774357528744509, guid: 7e648a694317fe243870cc648e8bd07f, type: 3}
 --- !u!134 &11541818
 PhysicMaterial:
   m_ObjectHideFlags: 0
