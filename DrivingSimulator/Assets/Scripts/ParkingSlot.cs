@@ -26,7 +26,6 @@ public class ParkingSlot : MonoBehaviour
     private void Awake()
     {
         parkingCompleted = false;
-        Debug.Log("METE");
     }
 
     private void Update()
