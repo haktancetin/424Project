@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public  class TutorialZonesController : MonoBehaviour
@@ -48,8 +49,10 @@ public  class TutorialZonesController : MonoBehaviour
 
     public void RestartTutorial()
     {
-        Destroy(currentTutorialZone);
-        CreateTutorialZone(zoneIndex);
+        //Destroy(currentTutorialZone);
+        //CreateTutorialZone(zoneIndex);
+
+        SceneManager.LoadScene("TrainingScene");
     }
 
     public void LoadNextZone()
