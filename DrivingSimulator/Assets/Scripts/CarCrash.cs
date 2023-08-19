@@ -8,8 +8,8 @@ public class CarCrash : MonoBehaviour
     private GameObject car;
     private MeshFilter[] childMeshFilter;
     private Vector3[][] vertices;
+    public static bool isCrashed;
 
-    [SerializeField] private MeshCollider[] colliders = default;
     [SerializeField] private float deformationRadius = 0.5f;
     [SerializeField] private float impactDamage = 2f;
 
@@ -27,6 +27,8 @@ public class CarCrash : MonoBehaviour
             vertices[i] = childMeshFilter[i].mesh.vertices;
             childMeshFilter[i].mesh.MarkDynamic();
         }
+
+        isCrashed = false;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -61,12 +63,8 @@ public class CarCrash : MonoBehaviour
         childMeshFilter[i].mesh.RecalculateNormals();
         childMeshFilter[i].mesh.RecalculateBounds();
 
-        if (colliders.Length > 0)
-        {
-            if (colliders[i] != null)
-            {
-                colliders[i].sharedMesh = childMeshFilter[i].mesh;
-            }
-        }
+     
+
+        isCrashed = true;
     }
 }
