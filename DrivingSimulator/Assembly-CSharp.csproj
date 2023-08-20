@@ -59,11 +59,13 @@
     <Compile Include="Assets\Scripts\TrafficLightsZone.cs" />
     <Compile Include="Assets\Scripts\ParkingUIManager.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\WaypointEditor.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesMetadataPicking.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoTouchInput.cs" />
     <Compile Include="Assets\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Scripts\ParkingZone.cs" />
     <Compile Include="Assets\Scripts\UICesium.cs" />
+    <Compile Include="Assets\Scripts\WaypointNavigator.cs" />
     <Compile Include="Assets\CarAI-Unity-main\Scripts\SensorManager.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesMetadataPickingVR.cs" />
     <Compile Include="Assets\Scripts\PedBehaviourScript.cs" />
@@ -86,10 +88,13 @@
     <Compile Include="Assets\Scripts\StatTracker.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesTeleportationArea.cs" />
+    <Compile Include="Assets\Scripts\WayPoint.cs" />
+    <Compile Include="Assets\CarNavigationController.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\FPSCameraScript.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Scripts\CarControllerScript.cs" />
+    <Compile Include="Assets\Scripts\WaypointManagerWindow.cs" />
     <Compile Include="Assets\Scripts\TutorialZone.cs" />
     <Compile Include="Assets\Scripts\CarSpawnerScript.cs" />
     <Compile Include="Assets\CustomAssets\CarControlsMap.cs" />

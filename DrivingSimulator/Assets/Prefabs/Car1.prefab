@@ -490,7 +490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6666596873916192612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -133.74, y: 5.41, z: 52.49}
+  m_LocalPosition: {x: -60.2, y: 3.55, z: 196.5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -554,10 +554,10 @@ MonoBehaviour:
   carFront: {fileID: 6665709403438593648}
   NavMeshLayers:
   - Roads
-  MaxSteeringAngle: 45
+  MaxSteeringAngle: 30
   MaxRPM: 150
-  ShowGizmos: 0
-  Debugger: 0
+  ShowGizmos: 1
+  Debugger: 1
   Patrol: 1
   CustomDestination: {fileID: 0}
   move: 0
