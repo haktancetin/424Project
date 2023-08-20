@@ -4851,7 +4851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 138, y: 100}
+  m_AnchoredPosition: {x: 142, y: 105}
   m_SizeDelta: {x: 248.42401, y: 172.0862}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7245934340743302077
@@ -4895,18 +4895,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'W - Go forward
-
-    S - Brakes/Reverse
-
-    A - Turn left
-
-    D - Turn
-    Right
-
-    Space - Handbrake
-
-    N - Parking Practice'
+  m_Text: "W - Go forward\nS - Brakes/Reverse\nA - Turn left\nD - Turn Right\nSpace
+    - Handbrake\n1-TrafficLights Practice \n2-Parking Practice"
 --- !u!1 &3365130422338082952
 GameObject:
   m_ObjectHideFlags: 0
