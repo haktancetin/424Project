@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class QuizManager : MonoBehaviour
 {
     //public Text questionText;
+    
     public Text[] answerText;
     public Button startButton;
     public GameObject quiz_panel;
@@ -15,6 +16,7 @@ public class QuizManager : MonoBehaviour
 
     private int currentQuestion=0;
     private int score=0;
+    private int cs=1;
 
     private string[] question ={"İşaret ile gösterilen nedir?"};
     private string [][] answers={
@@ -43,15 +45,14 @@ public class QuizManager : MonoBehaviour
     private int[] correctAnswer={0,1,2,3,1,1,1,2,0,0};
     void Start()
     {
-        quiz_panel.SetActive(true);
-        startButton.onClick.AddListener(StartQuiz);
-        
+         quiz_panel.SetActive(true);
+    startButton.onClick.AddListener(StartQuiz);
 
-        for (int i = 0; i < 4; i++)
-        {
-            int index = i; // Döngü değişkenini bir lambda içinde kullanmak için
-            answerButtons[i].onClick.AddListener(() => answerButton(index));
-        }
+    for (int i = 0; i < 4; i++)
+    {
+        int index = i;
+        answerButtons[i].onClick.AddListener(() => answerButton(index));
+    }
          
     }
 
@@ -63,7 +64,11 @@ public class QuizManager : MonoBehaviour
     }
 
      void NextQuestion(){
-         
+                if (currentQuestion >= question.Length)
+    {
+        EndQuiz();
+        return;
+    }
 
             if (currentQuestion==0)
             {
@@ -115,42 +120,40 @@ public class QuizManager : MonoBehaviour
             }
             
             else{
-
-
-                /// <summary>
-                /// hata
-                /// </summary>
-                /// <returns></returns>
             }
 
-           
+
             
-            for (int i = 0; i < 4; i++)
-            {
-                int index = i; // Döngü değişkenini bir lambda içinde kullanmak için
-                answerButtons[i].onClick.AddListener(() => answerButton(index));
-            }
+            
 
          
     }
-    public void answerButton(int answerindex){
-
-        if(answerindex==correctAnswer[currentQuestion]) {
-             Debug.Log("Cevap seçildi: " + answerindex + ". Şu anki Soru: " + currentQuestion);
-            score++;
-        }
-        currentQuestion++;
-
-        if (currentQuestion< 10)
+  
+public void answerButton(int answerindex)
+{
+    if (answerindex == correctAnswer[currentQuestion])
+    {
+        Debug.Log("Cevap seçildi: " + answerindex + ". Şu anki Soru: " + currentQuestion);
+        score++;
+         for (int i = 0; i < answerText.Length; i++)
         {
-            NextQuestion();
-        }else{
-
-            EndQuiz();
+            answerText[i].text = answers[currentQuestion][i];
+            //answerButtons[i].GetComponentInChildren<Text>().text = answers[currentQuestion][i];
         }
-
-
     }
+
+    currentQuestion++;
+
+    if (currentQuestion < question.Length)
+    {
+        NextQuestion();
+    }
+    else
+    {
+        EndQuiz();
+    }
+}
+
 
     private void EndQuiz () {
         Debug.Log("Test bitti:  Puaniniz "+score);
