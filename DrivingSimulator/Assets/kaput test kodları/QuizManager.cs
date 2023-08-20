@@ -47,7 +47,7 @@ public class QuizManager : MonoBehaviour
         startButton.onClick.AddListener(StartQuiz);
         
 
-        for (int i = 0; i < answerButtons.Length; i++)
+        for (int i = 0; i < 4; i++)
         {
             int index = i; // Döngü değişkenini bir lambda içinde kullanmak için
             answerButtons[i].onClick.AddListener(() => answerButton(index));
@@ -63,6 +63,7 @@ public class QuizManager : MonoBehaviour
     }
 
      void NextQuestion(){
+         
 
             if (currentQuestion==0)
             {
@@ -122,11 +123,9 @@ public class QuizManager : MonoBehaviour
                 /// <returns></returns>
             }
 
-            for(int i = 0; i < answerText.Length; i++) {
-                answerText[i].text = answers[currentQuestion][i];
-            }
+           
             
-            for (int i = 0; i < answerButtons.Length; i++)
+            for (int i = 0; i < 4; i++)
             {
                 int index = i; // Döngü değişkenini bir lambda içinde kullanmak için
                 answerButtons[i].onClick.AddListener(() => answerButton(index));
@@ -137,6 +136,7 @@ public class QuizManager : MonoBehaviour
     public void answerButton(int answerindex){
 
         if(answerindex==correctAnswer[currentQuestion]) {
+             Debug.Log("Cevap seçildi: " + answerindex + ". Şu anki Soru: " + currentQuestion);
             score++;
         }
         currentQuestion++;
