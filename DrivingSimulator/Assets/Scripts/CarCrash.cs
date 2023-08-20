@@ -33,7 +33,7 @@ public class CarCrash : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Building" || collision.gameObject.tag == "Car")
+        if (collision.gameObject.tag == "Building" || collision.gameObject.tag == "Goal")
         {
             Vector3 contactPoint = collision.contacts[0].point;
             Vector3 contactVelocity = collision.relativeVelocity * 0.05f;
