@@ -76,6 +76,51 @@
                     "processors": "",
                     "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "LeftMirror",
+                    "type": "Button",
+                    "id": "6eb87078-d203-4fec-8a6a-c66c09b512e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CenterMirror",
+                    "type": "Button",
+                    "id": "43915c62-ddc9-4697-9a3a-6d0fcd2db341",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightMirror",
+                    "type": "Button",
+                    "id": "291844d7-a9ae-463b-9e13-b367919fc411",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftBlinker",
+                    "type": "Button",
+                    "id": "38cea431-92ef-446c-952e-269ce8638c02",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightBlinker",
+                    "type": "Button",
+                    "id": "95807304-20a7-407c-80ad-44505ace8bed",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -104,7 +149,7 @@
                 {
                     "name": "positive",
                     "id": "6b0767f0-a802-4c94-aac9-860ef60a3cd3",
-                    "path": "<Keyboard>/#(ı)",
+                    "path": "<Keyboard>/#(I)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -215,7 +260,7 @@
                     "name": "",
                     "id": "8840ed96-6b79-43a3-8a45-7d2468c2bd8b",
                     "path": "<Keyboard>/#(T)",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "ToggleTutorial",
@@ -230,6 +275,61 @@
                     "processors": "",
                     "groups": "",
                     "action": "Reset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "644c2891-f3a2-4ddd-a900-cb3d008b1a81",
+                    "path": "<Keyboard>/#(J)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftMirror",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3b540071-db6e-4e1b-ba4d-b0f3e164ca07",
+                    "path": "<Keyboard>/#(K)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CenterMirror",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e301416a-e615-47cf-8071-4a97de9cebe0",
+                    "path": "<Keyboard>/#(L)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightMirror",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c897e25-ed28-4803-982d-f6e2c598d6dc",
+                    "path": "<Keyboard>/#(U)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftBlinker",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4de29406-ca9b-443f-8498-91ddbba48c29",
+                    "path": "<Keyboard>/#(ı)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightBlinker",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
