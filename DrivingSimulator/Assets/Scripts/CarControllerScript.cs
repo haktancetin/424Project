@@ -76,6 +76,8 @@ public class CarControllerScript : MonoBehaviour
     private float _originalPosY;
     private float _originalPosZ;
 
+    private Rigidbody rb;
+
     private IEnumerator LeftBlinker()
     {
         while (true)
@@ -144,19 +146,51 @@ public class CarControllerScript : MonoBehaviour
     }
 
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Car"))
+        {
+            gameManagerScript.UpdateScore(3, "Hit car!");
+        }
+    }
+
     private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("TrafficLight"))
         {
             TrafficLightController trafficLightController = col.gameObject.GetComponent<TrafficLightController>();
+
+            //Only trigger behaviour if collider is entered from the back - the traffic light faces that way
+
+            Vector3 triggerFrontDirection = col.gameObject.transform.forward;
+
+            //Calculate the vector from the trigger to the entering object
+            Vector3 triggerToEnteringObject = col.transform.position - transform.position;
+
+            //Normalize both vectors for accurate dot product calculation
+            triggerFrontDirection.Normalize();
+            triggerToEnteringObject.Normalize();
+
+            //Calculate the dot product
+            float dotProduct = Vector3.Dot(triggerFrontDirection, triggerToEnteringObject);
+
+            if (dotProduct > 0)
+            {
+                //Debug.Log("Object entered from the front.");
+            }
+            else
+            {
+                //Debug.Log("Object entered from the back.");
+                //If red or yellow are active, stop the car, if green is active, continue
+                if (trafficLightController.redLight.activeSelf)
+                {
+                    gameManagerScript.UpdateScore(1, "Ran red light!");
+                }
+            }
             if (trafficLightController.redLight.activeSelf)
             {
                 gameManagerScript.UpdateScore(1, "Ran red light!");
             }
-        }
-        else if (col.gameObject.CompareTag("Car"))
-        {
-            gameManagerScript.UpdateScore(3, "Hit car!");
         }
         else if (col.gameObject.CompareTag("Goal"))
         {
@@ -167,6 +201,8 @@ public class CarControllerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = this.gameObject.GetComponent<Rigidbody>();
+
         carControlsMap = new CarControlsMap();
 
 
@@ -313,8 +349,6 @@ public class CarControllerScript : MonoBehaviour
             wheelColliders[i].transform.GetChild(0).transform.rotation = quaternion;
 
         }
-
-        
         //Other Controls - Blinkers, Horn etc.
 
     }
