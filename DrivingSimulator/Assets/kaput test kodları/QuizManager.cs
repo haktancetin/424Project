@@ -45,11 +45,14 @@ public class QuizManager : MonoBehaviour
     {
         quiz_panel.SetActive(true);
         startButton.onClick.AddListener(StartQuiz);
-         for (int i = 0; i < answerButtons.Length; i++)
-            {
-                int index = i; // Döngü değişkenini bir lambda içinde kullanmak için
-                answerButtons[i].onClick.AddListener(() => answerButton(index));
-            }
+        
+
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            int index = i; // Döngü değişkenini bir lambda içinde kullanmak için
+            answerButtons[i].onClick.AddListener(() => answerButton(index));
+        }
+         
     }
 
      void StartQuiz(){
@@ -67,11 +70,11 @@ public class QuizManager : MonoBehaviour
             }else if(currentQuestion==1) 
                 
             {
-                pointer.transform.position=new Vector3(0,096f,1.064f,2.026f);
+                pointer.transform.position=new Vector3(0.096f,1.064f,2.026f);
             }else if(currentQuestion==2) 
                 
             {
-                pointer.transform.position=new Vector3(0,04f,1.326f,1.948f);
+                pointer.transform.position=new Vector3(0.04f,1.326f,1.948f);
             }
             else if(currentQuestion==3)
                 
@@ -97,17 +100,17 @@ public class QuizManager : MonoBehaviour
             else if(currentQuestion==7) 
                 
             {
-                pointer.transform.position=new Vector3(-0.412f,1.3609f,1.947f);
+                pointer.transform.position=new Vector3(-0.412f,1.361f,1.947f);
             }
             else if(currentQuestion==8) 
                 
             {
-                pointer.transform.position=new Vector3(-0.1959f,1.0369f,2.0409f);
+                pointer.transform.position=new Vector3(-0.196f,1.0369f,2.041f);
             }
             else if(currentQuestion==9) 
                 
             {
-                pointer.transform.position=new Vector3(-0.266f,1.4509f,1.917f);
+                pointer.transform.position=new Vector3(-0.266f,1.451f,1.917f);
             }
             
             else{
@@ -119,13 +122,17 @@ public class QuizManager : MonoBehaviour
                 /// <returns></returns>
             }
 
-            
-
-
             for(int i = 0; i < answerText.Length; i++) {
-                answerText[i].text=answers[currentQuestion][i];
+                answerText[i].text = answers[currentQuestion][i];
             }
-            NextQuestion();
+            
+            for (int i = 0; i < answerButtons.Length; i++)
+            {
+                int index = i; // Döngü değişkenini bir lambda içinde kullanmak için
+                answerButtons[i].onClick.AddListener(() => answerButton(index));
+            }
+
+         
     }
     public void answerButton(int answerindex){
 
@@ -134,7 +141,7 @@ public class QuizManager : MonoBehaviour
         }
         currentQuestion++;
 
-        if (currentQuestion< question.Length)
+        if (currentQuestion< 10)
         {
             NextQuestion();
         }else{
@@ -146,6 +153,6 @@ public class QuizManager : MonoBehaviour
     }
 
     private void EndQuiz () {
-        Debug.Log("Test bitti:  Puanınız "+score);
+        Debug.Log("Test bitti:  Puaniniz "+score);
     }
 }
