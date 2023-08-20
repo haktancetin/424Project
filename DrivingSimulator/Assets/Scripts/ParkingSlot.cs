@@ -28,9 +28,9 @@ public class ParkingSlot : MonoBehaviour
         parkingCompleted = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        parkingCompleted = false;
+
         
         if (player != null)
         {
@@ -38,12 +38,13 @@ public class ParkingSlot : MonoBehaviour
             if (Counter == 4 && !parkingCompleted)
             {
                 Debug.Log("4!");
-                if (playerRb.velocity.magnitude < 0.1f)
+                if (playerRb.velocity.magnitude < 0.2f)
                 {
                     parkingCompleted = true;
                     parkingZoneScript.OnParkComplete();
                     Counter = 0;
-                    
+                    parkingCompleted = false;
+
                 }
             }
         }
@@ -52,6 +53,7 @@ public class ParkingSlot : MonoBehaviour
             Debug.Log("player null");
             player = GameObject.FindGameObjectWithTag("Player");
             playerRb = player.GetComponent<Rigidbody>();
+            parkingCompleted = false;
         }
     }
 }

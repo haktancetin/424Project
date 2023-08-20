@@ -17,9 +17,13 @@ public  class TutorialZonesController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.N))
+        if(Input.GetKeyDown(KeyCode.Alpha2))
         {
             LoadNextZone();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            LoadFirstZone();
         }
     }
 
@@ -65,9 +69,21 @@ public  class TutorialZonesController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Tüm bölgeler tamamlandý.");
+            Debug.Log("Zaten Bu Bölgedesiniz.");
         }
        
+    }
+    public void LoadFirstZone()
+    {
+        if (zoneIndex - 1 >= 0)
+        {
+            SceneManager.LoadScene("TrainingScene");
+        }
+        else
+        {
+            Debug.Log("Zaten Bu Bölgedesiniz.");
+        }
+
     }
 
 }

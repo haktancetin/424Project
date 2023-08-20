@@ -7,6 +7,7 @@ public class DirectionHandler : MonoBehaviour
 {
     public GameObject warningObject;
     public Text warningText;
+    public string sceneName;
 
     private void Start()
     {
@@ -22,6 +23,9 @@ public class DirectionHandler : MonoBehaviour
             warningObject = GameObject.Find("WarningText");
             warningText = warningObject.GetComponent<Text>();
             Debug.Log("ready set");
+        } else
+        {
+            
         }
     }
 
@@ -30,7 +34,10 @@ public class DirectionHandler : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player in Trigger!");
-            warningText.text = "Wrong Side!";
+            if (warningObject != null)
+            {
+                warningText.text = "Wrong Side!";
+            }
         }
     }
 
@@ -39,7 +46,11 @@ public class DirectionHandler : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player Left Trigger!");
-            warningText.text = "";
+
+            if (warningObject != null)
+            {
+                warningText.text = "";
+            }
         }
     }
 }

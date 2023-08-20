@@ -25,6 +25,15 @@ public class SpeedCalculator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speedText.text = (carRb.velocity.magnitude * 3.6f).ToString("F0");
+        if (speedText != null)
+        {
+            speedText.text = (carRb.velocity.magnitude * 3.6f).ToString("F0");
+        } else
+        {
+            speedTextObject = GameObject.Find("Speed Text");
+            speedText = speedTextObject.GetComponent<Text>();
+            carRb = gameObject.GetComponent<Rigidbody>();
+        }
+        
     }
 }
