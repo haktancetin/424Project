@@ -10,7 +10,7 @@ public class TrafficLightController : MonoBehaviour
         yellow,
         green
     }
-   
+
     public GameObject redLight, yellowLight, greenLight;
     public TrafficLightsZone trafficLightsZone;
 
@@ -27,7 +27,7 @@ public class TrafficLightController : MonoBehaviour
         yellowtimer = 1.5f;
         greentimer = 3f;
     }
-    
+
     void Update()
     {
         changeLights();
@@ -57,6 +57,13 @@ public class TrafficLightController : MonoBehaviour
             yellowLight.SetActive(false);
             greenLight.SetActive(true);
         }
+        else if (timer >= redtimer + yellowtimer + greentimer && timer < redtimer + yellowtimer + greentimer + yellowtimer)
+        {
+            lightcolor = Lightcolor.yellow;
+            redLight.SetActive(false);
+            yellowLight.SetActive(true);
+            greenLight.SetActive(false);
+        }
         else
         {
             timer = 0f;
@@ -70,7 +77,7 @@ public class TrafficLightController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             trafficLightsZone.CheckFailSuccess(lightcolor);
-            
+
         }
     }
 

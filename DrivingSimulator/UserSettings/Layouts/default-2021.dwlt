@@ -350,7 +350,7 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
@@ -434,6 +434,7 @@ MonoBehaviour:
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: bc0df2ffc63cf2ff2474f2ff522bf4ff542bf4ff86a8f4ff06b4f4ff0cb4f4ff12b4f4ff58cdf4fff4d9f4ffda18f5fff07cf5ff1a02f6ff5e78f7ff6278f7ff6678f7ffb878f7ffbc78f7ff96b6f7ff98b6f7ff46f4ffff0cfbffff
+
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: TrafficLight (32)
@@ -512,7 +513,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.666666}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -869,7 +870,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public  class TutorialZonesController : MonoBehaviour
@@ -8,7 +9,6 @@ public  class TutorialZonesController : MonoBehaviour
     private int zoneIndex = -1;
 
     public GameObject currentTutorialZone = null;
-    [SerializeField] GameObject currentCanvas;
 
     private void Start()
     {
@@ -17,10 +17,13 @@ public  class TutorialZonesController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.N))
+        if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            currentCanvas.SetActive(false);
             LoadNextZone();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            LoadFirstZone();
         }
     }
 
@@ -50,8 +53,10 @@ public  class TutorialZonesController : MonoBehaviour
 
     public void RestartTutorial()
     {
-        Destroy(currentTutorialZone);
-        CreateTutorialZone(zoneIndex);
+        //Destroy(currentTutorialZone);
+        //CreateTutorialZone(zoneIndex);
+
+        SceneManager.LoadScene("TrainingScene");
     }
 
     public void LoadNextZone()
@@ -64,9 +69,21 @@ public  class TutorialZonesController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Tüm bölgeler tamamlandý.");
+            Debug.Log("Zaten Bu Bölgedesiniz.");
         }
        
+    }
+    public void LoadFirstZone()
+    {
+        if (zoneIndex - 1 >= 0)
+        {
+            SceneManager.LoadScene("TrainingScene");
+        }
+        else
+        {
+            Debug.Log("Zaten Bu Bölgedesiniz.");
+        }
+
     }
 
 }

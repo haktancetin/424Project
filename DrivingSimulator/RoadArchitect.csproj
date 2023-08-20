@@ -120,6 +120,7 @@
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\RoadShaderDX11.shader" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\RoadShaderLowDX11.shader" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\TransparentWithShadows.shader" />
+    <None Include="Assets\RoadArchitect\RoadArchitect-master\Editor\Library\W\W.txt" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\RoadShaderLow.shader" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\RoadArchitect.asmdef" />
     <None Include="Assets\RoadArchitect\RoadArchitect-master\Shaders\TransparentWithShadowsZ.shader" />

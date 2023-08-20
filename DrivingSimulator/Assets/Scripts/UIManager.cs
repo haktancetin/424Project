@@ -9,15 +9,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI greenLightPassedText;
     [SerializeField] TextMeshProUGUI redLightsPassedText;
 
-    public void GreenLightPassed()
+    public void UpdateUI()
     {
         greenLightPassedText.text = StatTracker.greenlightPassed.ToString();
-    }
-
-    public void RedLightPassed()
-    {
         redLightsPassedText.text = StatTracker.redlightPassed.ToString();
     }
-
 
 }
