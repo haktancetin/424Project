@@ -11,6 +11,7 @@ public class QuizManager : MonoBehaviour
     public Button startButton;
     public GameObject quiz_panel;
     public GameObject pointer;
+    public Button[] answerButtons;
 
     private int currentQuestion=0;
     private int score=0;
@@ -44,6 +45,11 @@ public class QuizManager : MonoBehaviour
     {
         quiz_panel.SetActive(true);
         startButton.onClick.AddListener(StartQuiz);
+         for (int i = 0; i < answerButtons.Length; i++)
+            {
+                int index = i; // Döngü değişkenini bir lambda içinde kullanmak için
+                answerButtons[i].onClick.AddListener(() => answerButton(index));
+            }
     }
 
      void StartQuiz(){
@@ -58,14 +64,68 @@ public class QuizManager : MonoBehaviour
             if (currentQuestion==0)
             {
                 pointer.transform.position=new Vector3(-0.186f,1.366f,1.939f);
+            }else if(currentQuestion==1) 
+                
+            {
+                pointer.transform.position=new Vector3(0,096f,1.064f,2.026f);
+            }else if(currentQuestion==2) 
+                
+            {
+                pointer.transform.position=new Vector3(0,04f,1.326f,1.948f);
+            }
+            else if(currentQuestion==3)
+                
+            {
+                pointer.transform.position=new Vector3(-0.065f,1.278f,1.966f);
             }
 
-            //questionText.text=question[currentQuestion];
+            else if(currentQuestion==4) 
+                
+            {
+                pointer.transform.position=new Vector3(-0.453f,1.197f,1.998f);
+            }
+            else if(currentQuestion==5) 
+                
+            {
+                pointer.transform.position=new Vector3(0.291f,1.210f,1.98f);
+            }
+            else if(currentQuestion==6) 
+                
+            {
+                pointer.transform.position=new Vector3(-0.187f,1.125f,2.015f);
+            }
+            else if(currentQuestion==7) 
+                
+            {
+                pointer.transform.position=new Vector3(-0.412f,1.3609f,1.947f);
+            }
+            else if(currentQuestion==8) 
+                
+            {
+                pointer.transform.position=new Vector3(-0.1959f,1.0369f,2.0409f);
+            }
+            else if(currentQuestion==9) 
+                
+            {
+                pointer.transform.position=new Vector3(-0.266f,1.4509f,1.917f);
+            }
+            
+            else{
+
+
+                /// <summary>
+                /// hata
+                /// </summary>
+                /// <returns></returns>
+            }
+
+            
+
+
             for(int i = 0; i < answerText.Length; i++) {
                 answerText[i].text=answers[currentQuestion][i];
-
-                
             }
+            NextQuestion();
     }
     public void answerButton(int answerindex){
 
