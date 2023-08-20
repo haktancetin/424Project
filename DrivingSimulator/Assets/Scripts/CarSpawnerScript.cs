@@ -17,7 +17,7 @@ public class CarSpawnerScript : MonoBehaviour
             carToSpawn.transform.position = transform.position;
             carToSpawn.transform.forward = transform.forward;
             Instantiate(carToSpawn);
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(30f);
         }
     }
 

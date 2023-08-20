@@ -11,18 +11,27 @@ public class GameManagerScript : MonoBehaviour
     private int maxScore;
 
     [SerializeField]
+    public float speedLimit;
+
+    [SerializeField]
     private TextMeshProUGUI scoreText;
 
     [SerializeField]
     private TextMeshProUGUI reasonText;
 
     [SerializeField]
+    private TextMeshProUGUI speedText;
+
+    [SerializeField]
     private CarControllerScript player;
+
+    [SerializeField]
+    private Rigidbody playerRB;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        speedText.text = "Speed Limit: " + speedLimit + " km/h";
     }
 
     IEnumerator MessageFlash(string message)
@@ -58,6 +67,9 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerRB.velocity.magnitude * 3.6f > speedLimit)
+        {
+            UpdateScore(2, "Speeding!");
+        }
     }
 }

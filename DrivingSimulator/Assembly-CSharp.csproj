@@ -63,16 +63,20 @@
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoTouchInput.cs" />
     <Compile Include="Assets\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Scripts\ParkingZone.cs" />
+    <Compile Include="Assets\Scripts\UICesium.cs" />
+    <Compile Include="Assets\CarAI-Unity-main\Scripts\SensorManager.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesMetadataPickingVR.cs" />
     <Compile Include="Assets\Scripts\PedBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\ParkingZoneChecker.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesFlyToLocationHandler.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
+    <Compile Include="Assets\CarAI-Unity-main\Scripts\controllingCarAI.cs" />
     <Compile Include="Assets\Scripts\ParkingSlot.cs" />
     <Compile Include="Assets\Unity-Speedometer-master\Speedometer.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
     <Compile Include="Assets\Scripts\GoalScript.cs" />
+    <Compile Include="Assets\Scripts\CrashCameraRotation.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesScene.cs" />
@@ -87,13 +91,12 @@
     <Compile Include="Assets\Cesium\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Scripts\CarControllerScript.cs" />
     <Compile Include="Assets\Scripts\TutorialZone.cs" />
+    <Compile Include="Assets\Scripts\CarSpawnerScript.cs" />
     <Compile Include="Assets\CustomAssets\CarControlsMap.cs" />
     <Compile Include="Assets\Scripts\TutorialZonesController.cs" />
+    <Compile Include="Assets\Scripts\CarCrash.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
-    <Compile Include="Assets\Scripts\CarSpawnerScript.cs" />
-    <Compile Include="Assets\CarAI-Unity-main\Scripts\SensorManager.cs" />
     <Compile Include="Assets\CarAI-Unity-main\Scripts\CarAI.cs" />
-    <Compile Include="Assets\CarAI-Unity-main\Scripts\controllingCarAI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cesium\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
