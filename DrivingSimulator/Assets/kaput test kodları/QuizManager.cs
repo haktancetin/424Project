@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
 {
-    public Text questionText;
+    //public Text questionText;
     public Text[] answerText;
     public Button startButton;
     public GameObject quiz_panel;
@@ -60,7 +60,7 @@ public class QuizManager : MonoBehaviour
                 pointer.transform.position=new Vector3(-0.186f,1.366f,1.939f);
             }
 
-            questionText.text=question[currentQuestion];
+            //questionText.text=question[currentQuestion];
             for(int i = 0; i < answerText.Length; i++) {
                 answerText[i].text=answers[currentQuestion][i];
 
