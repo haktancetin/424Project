@@ -58,16 +58,20 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\TrafficLightsZone.cs" />
     <Compile Include="Assets\Scripts\ParkingUIManager.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Audio\CheckSFXVolume.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\WaypointEditor.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesMetadataPicking.cs" />
+    <Compile Include="Assets\Scripts\LoadScenes.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoTouchInput.cs" />
     <Compile Include="Assets\Scripts\FloatingText.cs" />
     <Compile Include="Assets\Scripts\ParkingZone.cs" />
     <Compile Include="Assets\Scripts\UICesium.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemeEditor\ThemedUI.cs" />
     <Compile Include="Assets\Scripts\WaypointNavigator.cs" />
     <Compile Include="Assets\CarAI-Unity-main\Scripts\SensorManager.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesMetadataPickingVR.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Misc\ExtraLinks.cs" />
     <Compile Include="Assets\Scripts\PedBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\ParkingZoneChecker.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesFlyToLocationHandler.cs" />
@@ -75,14 +79,18 @@
     <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\CarAI-Unity-main\Scripts\controllingCarAI.cs" />
     <Compile Include="Assets\Scripts\DirectionHandler.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Managers\UIMenuManager.cs" />
     <Compile Include="Assets\Scripts\ParkingSlot.cs" />
     <Compile Include="Assets\Unity-Speedometer-master\Speedometer.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Audio\CheckMusicVolume.cs" />
     <Compile Include="Assets\Scripts\GoalScript.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Managers\UISettingsManager.cs" />
     <Compile Include="Assets\Scripts\CrashCameraRotation.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesScene.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Misc\ResetDemo.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\TrafficLightController.cs" />
@@ -91,12 +99,14 @@
     <Compile Include="Assets\Cesium\CesiumForUnitySamples\Scripts\CesiumSamplesTeleportationArea.cs" />
     <Compile Include="Assets\Scripts\WayPoint.cs" />
     <Compile Include="Assets\CarNavigationController.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemeEditor\ThemedUIData.cs" />
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
     <Compile Include="Assets\Scripts\FPSCameraScript.cs" />
     <Compile Include="Assets\Scripts\SpeedCalculator.cs" />
     <Compile Include="Assets\Cesium\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Scripts\CarControllerScript.cs" />
     <Compile Include="Assets\Scripts\WaypointManagerWindow.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemeEditor\ThemedUIElement.cs" />
     <Compile Include="Assets\Scripts\TutorialZone.cs" />
     <Compile Include="Assets\Scripts\CarSpawnerScript.cs" />
     <Compile Include="Assets\CustomAssets\CarControlsMap.cs" />
@@ -105,16 +115,6 @@
     <Compile Include="Assets\Scripts\CarCrash.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
     <Compile Include="Assets\CarAI-Unity-main\Scripts\CarAI.cs" />
-    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Audio\CheckSFXVolume.cs" />
-    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Misc\ResetDemo.cs" />
-    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Misc\ExtraLinks.cs" />
-    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Audio\CheckMusicVolume.cs" />
-    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Managers\UISettingsManager.cs" />
-    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemeEditor\ThemedUIData.cs" />
-    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemeEditor\ThemedUIElement.cs" />
-    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemeEditor\ThemedUI.cs" />
-    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Managers\UIMenuManager.cs" />
-    <Compile Include="Assets\Scripts\LoadScenes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cesium\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
@@ -895,6 +895,9 @@
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
@@ -912,6 +915,9 @@
     </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
@@ -963,12 +969,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
