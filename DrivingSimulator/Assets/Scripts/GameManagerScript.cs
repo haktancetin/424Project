@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -28,6 +29,12 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField]
     private Rigidbody playerRB;
 
+    [SerializeField]
+    private Canvas carUI;
+
+    [SerializeField]
+    private Canvas mainMenuUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +58,8 @@ public class GameManagerScript : MonoBehaviour
 
         if (player.score > maxScore)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            SceneManager.LoadScene(4);
+            //UnityEditor.EditorApplication.isPlaying = false;
             //Application.Quit();
         }
     }

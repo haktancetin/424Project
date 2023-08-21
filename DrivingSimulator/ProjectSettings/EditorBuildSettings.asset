@@ -6,10 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 829a86ba161cdd840842063447f41aab
+  - enabled: 1
+    path: Assets/Scenes/TrainingScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/DrivingExamScene.unity
+    guid: d0794994373396e469c99ed99199565a
+  - enabled: 1
     path: Assets/Cesium/CesiumForUnitySamples/Scenes/SanFrancisco.unity
     guid: e010cb28e74af7f4cb516a1406e8bfd0
   - enabled: 1
-    path: Assets/Cesium/CesiumForUnitySamples/Scenes/01_CesiumWorld.unity
-    guid: f247585a97d347241b998d973481c4f5
+    path: Assets/Scenes/DrivingExamMenu.unity
+    guid: 79c9fcb16d3391946a25b9ebc7ea497b
   m_configObjects:
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3a936724693a48945a85e081deed45eb, type: 2}

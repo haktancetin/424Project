@@ -1640,6 +1640,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!223 &935244155 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 3745671316898912786, guid: c66c8bf9f73ece045be6c74c31d04439, type: 3}
+  m_PrefabInstance: {fileID: 164826434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &966227722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1741,6 +1746,8 @@ MonoBehaviour:
   speedText: {fileID: 1714707428}
   player: {fileID: 1277277760}
   playerRB: {fileID: 1277277762}
+  carUI: {fileID: 935244155}
+  mainMenuUI: {fileID: 0}
 --- !u!4 &991086156
 Transform:
   m_ObjectHideFlags: 0
