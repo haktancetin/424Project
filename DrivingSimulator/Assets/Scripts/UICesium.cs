@@ -11,10 +11,10 @@ public class UICesium : MonoBehaviour
     {
         if(index == 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
         }else if(index == 1)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 }
